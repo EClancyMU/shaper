@@ -14,10 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, echo=FALSE}
-#library(shaper)
-```
-
 
 ## Introduction
 
@@ -52,12 +48,112 @@ devtools::install_github('EClancyMU/shaper')
 
 to install the latest development version of the package from shaper [GitHub page](https://github.com/EClancyMU/shaper).
 
-In either case, if you then type: 
+In either case, if you then type:
 
-```{r, eval=FALSE}
+```{r}
 library(shaper)
 ```
 
-it will load in all the aforementioned __shaper__ functions.
+it will load in all the aforementioned **shaper** functions.
 
-Some features may not yet be fully tested, and occasionally this version might be liable to break when it is in the process of being updated. If you find bugs or want to suggest new features please visit the [GitHub issues page](https://github.com/EClancyMU/shaper/issues). 
+Some features may not yet be fully tested, and occasionally this version might be liable to break when it is in the process of being updated. If you find bugs or want to suggest new features please visit the [GitHub issues page](https://github.com/EClancyMU/shaper/issues).
+
+## Creation of Generic Shapes
+
+This section will guide you through creating basic 2D and 3D shapes. Let's explore how to use these functions to instantiate shapes like rectangles, squares, circles and more demonstrating their simplicity and versatility.
+
+Rectangle
+
+Create a rectangle by specifying the its height and width. For example, to create a rectangle of height 2 and width 3
+
+```{r}
+r <- rectangle(2,3)
+```
+
+Square
+
+Create a square by providing the length of its side. For example, to create a square of side length 4
+
+```{r}
+s <- square(4)
+```
+
+Circle
+
+To create a circle, you only need to specify its radius. Here's an example of creating a circle with a radius of 5
+
+```{r}
+c <- circle(5)
+```
+
+Triangle
+
+A triangle can be created by specifying the lengths of its three sides. For example, here's a triangle with sides 3,4 and 5
+
+```{r}
+t <- triangle(3,4,5)
+```
+
+Cuboid
+
+A cuboid can be created by defining its height, width and depth. Here's a cuboid with dimensions 2x3x4
+
+```{r}
+cu <- cuboid(2,3,4)
+```
+
+Cube
+
+Create a cube by providing its side length. For instance, here's a cube with side length 3
+
+```{r}
+cub <- cube(3)
+```
+
+Sphere
+
+To create a sphere, provide its radius. For example, to create a sphere of radius 6
+
+```{r}
+sp <- sphere(6)
+```
+
+Cylinder
+
+A cylinder requires a radius and height. Here's a cylinder with a radius of 3 and height of 5
+
+```{r}
+cy <- cylinder(3,5)
+```
+
+## Analyzing Functions
+
+After creating various geometric shapes, we can find out some basic properties and this section covers the functions used to calculate the area, perimeter (for 2D shapes), and volume (for 3D shapes) of any shape from the above section.
+
+### Calculating Area
+
+The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one paramter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
+```{r}
+print(class(r))
+area(r)
+area.rectangle(r)
+```
+
+Similarly we can find the area for all others shapes using the same format. 
+
+
+### Calculating Perimeter (For 2D Shapes)
+
+The `perimeter` function calculates the perimeter of a given 2D shape. Just like area function this one as well takes only the object parameter. Here's an example on how to find the perimeter of a circle
+```{r}
+c <- circle(5)
+perimeter.circle(c)
+```
+
+### Calculating Volume (For 3D Shapes)
+
+The `volume` function calculates the volume of 3D shapes and only takes in the object created to store a 3D shape as a parameter. For example, to find out the volume of a cylinder (cy) which was created above
+```{r}
+volume.cylinder(cy)
+```
+

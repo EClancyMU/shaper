@@ -37,7 +37,8 @@ triangle <- function(a, b, c) {
   if(!is.numeric.value(a) || !is.numeric.value(b) || !is.numeric.value(c)) {
     stop("a, b and c must be numeric values.")
   }
-  if(a+b>c & b+c>a & c+a >b){
+  ##triangle inequality theorem
+  if(a+b>c & b+c>a & c+a>b){
     tri <- list(a = a, b = b, c = c)
     class(tri) <- c("shape","2dShape", "triangle")
     return(tri)
