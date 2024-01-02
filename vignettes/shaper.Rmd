@@ -5,10 +5,15 @@ vignette: >
   %\VignetteIndexEntry{shaper}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteDepends{ggplot2}
+  %\VignetteDepends{rgl}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  fig.align = "center",
   collapse = TRUE,
   comment = "#>"
 )
@@ -17,7 +22,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-shaper is an R package which allows to create, analyze and visualize some basic two-dimensional (2D) and three-dimensional (3D) shapes. Our journey through this vignette will take us from basic constructs of simple shapes like squares and circles, to the more complex realms of cuboids and spheres.
+`shaper` is an R package which allows to create, analyze and visualize some basic two-dimensional (2D) and three-dimensional (3D) shapes. Our journey through this vignette will take us from basic constructs of simple shapes like squares and circles, to the more complex realms of cuboids and spheres.
 
 ## Background
 
@@ -27,13 +32,13 @@ Geometry is a fundamental branch of mathematics that finds extensive application
 
 In this vignette, we dive into:
 
-Creation of Geometric Shapes: We'll start by defining and creating basic 2D shapes such as rectangles, squares, circles, and triangles, and 3D shapes like cuboids, cubes, spheres, and cylinders. Each shape is created through custom R functions, encapsulating properties like dimensions.
+__Creation of Geometric Shapes__: We'll start by defining and creating basic 2D shapes such as rectangles, squares, circles, and triangles, and 3D shapes like cuboids, cubes, spheres, and cylinders. Each shape is created through custom R functions, encapsulating properties like dimensions.
 
-Analytical Functions: Explore functions to calculate key properties of these shapes, such as area and perimeter for 2D shapes, and volume for 3D shapes. These functions demonstrate how mathematical principles are applied programmatically.
+__Analytical Functions__: Explore functions to calculate key properties of these shapes, such as area and perimeter for 2D shapes, and volume for 3D shapes. These functions demonstrate how mathematical principles are applied programmatically.
 
-Summarization of Shape Properties: Learn how to use a summary function that elegantly displays important attributes of a shape, like its type, area, perimeter (for 2D shapes), and volume (for 3D shapes).
+__Summarization of Shape Properties__: Learn how to use a summary function that elegantly displays important attributes of a shape, like its type, area, perimeter (for 2D shapes), and volume (for 3D shapes).
 
-Visualization Techniques: Delve into methods for visualizing these shapes in R. We'll use ggplot2 for plotting 2D shapes and rgl for rendering 3D shapes, showcasing how different R packages can be employed for effective visualization.
+__Visualization__: Delve into methods for visualizing these shapes in R. We'll use ggplot2 for plotting 2D shapes and rgl for rendering 3D shapes, showcasing how different R packages can be employed for effective visualization.
 
 ## Installation
 
@@ -50,7 +55,7 @@ to install the latest development version of the package from shaper [GitHub pag
 
 In either case, if you then type:
 
-```{r}
+```{r,message=FALSE}
 library(shaper)
 ```
 
@@ -62,7 +67,7 @@ Some features may not yet be fully tested, and occasionally this version might b
 
 This section will guide you through creating basic 2D and 3D shapes. Let's explore how to use these functions to instantiate shapes like rectangles, squares, circles and more demonstrating their simplicity and versatility.
 
-Rectangle
+__Rectangle__
 
 Create a rectangle by specifying the its height and width. For example, to create a rectangle of height 2 and width 3
 
@@ -70,7 +75,7 @@ Create a rectangle by specifying the its height and width. For example, to creat
 r <- rectangle(2,3)
 ```
 
-Square
+__Square__
 
 Create a square by providing the length of its side. For example, to create a square of side length 4
 
@@ -78,7 +83,7 @@ Create a square by providing the length of its side. For example, to create a sq
 s <- square(4)
 ```
 
-Circle
+__Circle__
 
 To create a circle, you only need to specify its radius. Here's an example of creating a circle with a radius of 5
 
@@ -86,7 +91,7 @@ To create a circle, you only need to specify its radius. Here's an example of cr
 c <- circle(5)
 ```
 
-Triangle
+__Triangle__
 
 A triangle can be created by specifying the lengths of its three sides. For example, here's a triangle with sides 3,4 and 5
 
@@ -94,7 +99,7 @@ A triangle can be created by specifying the lengths of its three sides. For exam
 t <- triangle(3,4,5)
 ```
 
-Cuboid
+__Cuboid__
 
 A cuboid can be created by defining its height, width and depth. Here's a cuboid with dimensions 2x3x4
 
@@ -102,7 +107,7 @@ A cuboid can be created by defining its height, width and depth. Here's a cuboid
 cu <- cuboid(2,3,4)
 ```
 
-Cube
+__Cube__
 
 Create a cube by providing its side length. For instance, here's a cube with side length 3
 
@@ -110,7 +115,7 @@ Create a cube by providing its side length. For instance, here's a cube with sid
 cub <- cube(3)
 ```
 
-Sphere
+__Sphere__
 
 To create a sphere, provide its radius. For example, to create a sphere of radius 6
 
@@ -118,7 +123,7 @@ To create a sphere, provide its radius. For example, to create a sphere of radiu
 sp <- sphere(6)
 ```
 
-Cylinder
+__Cylinder__
 
 A cylinder requires a radius and height. Here's a cylinder with a radius of 3 and height of 5
 
@@ -132,10 +137,9 @@ After creating various geometric shapes, we can find out some basic properties a
 
 ### Calculating Area
 
-The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one paramter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
+The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
 ```{r}
-print(class(r))
-area(r)
+#area(r)
 area.rectangle(r)
 ```
 
@@ -149,6 +153,8 @@ The `perimeter` function calculates the perimeter of a given 2D shape. Just like
 c <- circle(5)
 perimeter.circle(c)
 ```
+The same format can be used to find out the perimeter for remaining 2D shapes.
+
 
 ### Calculating Volume (For 3D Shapes)
 
@@ -157,3 +163,75 @@ The `volume` function calculates the volume of 3D shapes and only takes in the o
 volume.cylinder(cy)
 ```
 
+Similarly, we can find the volume of other 3D shapes using the same format.
+
+
+## Summarization of Shape Properties
+
+The `summary` function in the package provides a convenient way to display key attributes of a shape. It will display the shape's type along with its relevant properties such as area and perimeter for 2D shapes, or surface area and volume for 3D shapes.
+
+### Summary of a 2D shape
+
+For a 2D shape like a rectangle, square, circle or triangle, the `summary` function will display the shape type, its perimeter and its area. Here's an example of using the `summary` function on a rectangle.
+```{r}
+r <- rectangle(2,3)
+summary.2dShape(r)
+```
+
+### Summary of a 3D shape
+
+For a 3D shape like cuboid, cube, sphere or a cylinder, the `summary` function will include the shape type, its surface area and volume. For example, to use the `summary` function on a cube
+```{r}
+cub <- cube(3)
+summary.3dShape(cub)
+```
+
+## Visualization
+
+Visualization is a crucial aspect when working with geometric shapes and the `draw` function this package provides capabilities to visualize both 2D and 3D shapes.
+
+### Drawing 2D shapes
+
+For 2D shapes, such as rectangles, squares, circles, and triangles, the `draw` function utilizes `ggplot2` to create clear and detailed visualizations.
+
+To visualize a rectangle, firstly load the `ggplot2` package and then simply create the shape and use the draw function
+```{r}
+library(ggplot2)
+r <- rectangle(2, 3)
+draw.rectangle(r)
+```
+
+The same command can be used to visualize other 2D shapes such as square, circle and triangle.
+
+Users can also pass in other attributes such as color of the shape (outline of the shape) as well can fill color inside the shape with the default values being "blue" and "transparent" respectively.
+
+Here's the same rectangle with different color and fill values.
+```{r}
+r <- rectangle(2, 3)
+draw.rectangle(r, color = "green", fill = "red")
+```
+
+### Drawing 3D shapes
+
+For 3D shapes like cuboid, cube, sphere and cylinder, the `draw` function leverages the `rgl` package to render these shapes in three-dimensional space.
+
+To visualize a cube, first load the `rgl` package and then create the 3D shape and call in the draw function
+```{r}
+library(rgl)
+cub <- cube(3)
+draw.cube(cub)
+```
+
+
+This command will open a new window displaying the 3D cube which can be interacted such as allowing for rotation and zooming to examine the shape. As all the 3D shapes open in a window, here's what exactly the window looks like for the cube created above.
+
+![](Default Cube.png){width=600px height=300px}
+
+The same command can be used to visualize other 3D shapes such as cuboid, sphere and cylinder and just like 2D shapes, users can also change the color of the 3D by changing the value of the color attribute with the default being "red"
+
+```{r}
+cub <- cube(3)
+draw.cube(cub, color = "yellow")
+```
+
+![](Customised Cube.png){width=600px height=300px}

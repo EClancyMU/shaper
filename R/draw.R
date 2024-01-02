@@ -158,7 +158,7 @@ draw.cube <- function(cube, color = "red", ...) {
 }
 
 
-draw.cylinder <- function(cyl, color = "blue", ..){
+draw.cylinder <- function(cyl, color = "red", ..){
   center <- matrix(c(0, 0, 0, 0, 0, cyl$height), ncol = 3, byrow = TRUE)
   radius <- cyl$radius
   cylinder_mesh <- cylinder3d(center = center, radius = radius, sides = 1000,closed=-2)
