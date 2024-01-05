@@ -15,6 +15,10 @@ is.numeric.value <- function(x) {
 #' @return An object of class 'shape', '2dShape', and 'rectangle'.
 #'
 #' @family 2D Shape Classes
+#'
+#' @examples
+#' my_rectangle <- rectangle(height = 2,width = 4)
+#'
 #' @export
 rectangle <- function(height, width) {
   if(!is.numeric.value(height) || !is.numeric.value(width)) {
@@ -32,6 +36,11 @@ rectangle <- function(height, width) {
 #'
 #' @family 2D Shape Classes
 #' @seealso \code{\link{rectangle}}
+#'
+#' @examples
+#' my_square1 <- square(sideLength = 5)
+#' my_square2 < rectangle(height = 5, width = 5)
+#'
 #' @export
 square <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
@@ -50,6 +59,10 @@ square <- function(sideLength){
 #' @return An object of class 'shape', '2dShape', and 'circle'.
 #'
 #' @family 2D Shape Classes
+#'
+#' @examples
+#' my_circle <- circle(radius = 3)
+#'
 #' @export
 circle <- function(radius){
   if(!is.numeric.value(radius)) {
@@ -69,6 +82,10 @@ circle <- function(radius){
 #' @return An object of class 'shape', '2dShape', and 'triangle'.
 #'
 #' @family 2D Shape Classes
+#'
+#' @examples
+#' my_triangle <- triangle(a = 3, b = 4, c = 5)
+#'
 #' @export
 triangle <- function(a, b, c) {
   if(!is.numeric.value(a) || !is.numeric.value(b) || !is.numeric.value(c)) {
@@ -91,6 +108,11 @@ triangle <- function(a, b, c) {
 #' @return An object of class 'shape', '3dShape', and 'cuboid'.
 #'
 #' @family 3D Shape Classes
+#'
+#' @examples
+#' my_cuboid1 <- cuboid(height = 3, width = 4, depth = 5)
+#'
+#'
 #' @export
 cuboid <- function(height, width, depth) {
   if(!is.numeric.value(height) || !is.numeric.value(width) || !is.numeric.value(depth)) {
@@ -108,6 +130,11 @@ cuboid <- function(height, width, depth) {
 #'
 #' @family 3D Shape Classes
 #' @seealso \code{\link{cuboid}}
+#'
+#' @examples
+#' my_cube1 <- cube(sideLength = 5)
+#' my_cube2 <- cuboid(height = 3, width = 3, depth = 3)
+#'
 #' @export
 cube <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
@@ -126,6 +153,10 @@ cube <- function(sideLength){
 #' @return An object of class 'shape', '3dShape', and 'sphere'.
 #'
 #' @family 3D Shape Classes
+#'
+#' @examples
+#' my_sphere <- sphere(radius = 2)
+#'
 #' @export
 sphere <- function(radius){
   if(!is.numeric.value(radius)) {
@@ -144,6 +175,10 @@ sphere <- function(radius){
 #' @return An object of class 'shape', '3dShape', and 'cylinder'.
 #'
 #' @family 3D Shape Classes
+#'
+#' @examples
+#' my_cylinder <- cylinder(radius = 2, height = 5)
+#'
 #' @export
 cylinder <- function(radius, height){
   if(!is.numeric.value(radius) || !is.numeric.value(height)) {
