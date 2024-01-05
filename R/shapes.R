@@ -1,9 +1,21 @@
-# Helper function to check if the input is an integer
+#' Function to check if the input is numeric.
+#'
+#' @param x Input value to be checked.
+#' @return Logical value indicating whether the input is numeric.
+#'
+#' @export
 is.numeric.value <- function(x) {
   is.numeric(x)
 }
 
-## 2D Shape Classes
+#' Create a rectangle object.
+#'
+#' @param height Height of the rectangle.
+#' @param width Width of the rectangle.
+#' @return An object of class 'shape', '2dShape', and 'rectangle'.
+#'
+#' @family 2D Shape Classes
+#' @export
 rectangle <- function(height, width) {
   if(!is.numeric.value(height) || !is.numeric.value(width)) {
     stop("Height and width must be numeric values.")
@@ -13,6 +25,14 @@ rectangle <- function(height, width) {
   return(rect)
 }
 
+#' Create a square object.
+#'
+#' @param sideLength Side length of the square.
+#' @return An object of class 'shape', '2dShape', and 'square'.
+#'
+#' @family 2D Shape Classes
+#' @seealso \code{\link{rectangle}}
+#' @export
 square <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
     stop("Side Length must be a numeric value.")
@@ -24,6 +44,13 @@ square <- function(sideLength){
   return(squ)
 }
 
+#' Create a circle object.
+#'
+#' @param radius Radius of the circle.
+#' @return An object of class 'shape', '2dShape', and 'circle'.
+#'
+#' @family 2D Shape Classes
+#' @export
 circle <- function(radius){
   if(!is.numeric.value(radius)) {
     stop("Radius must be a numeric value.")
@@ -33,6 +60,16 @@ circle <- function(radius){
   return(circ)
 }
 
+
+#' Create a triangle object.
+#'
+#' @param a Length of side a.
+#' @param b Length of side b.
+#' @param c Length of side c.
+#' @return An object of class 'shape', '2dShape', and 'triangle'.
+#'
+#' @family 2D Shape Classes
+#' @export
 triangle <- function(a, b, c) {
   if(!is.numeric.value(a) || !is.numeric.value(b) || !is.numeric.value(c)) {
     stop("a, b and c must be numeric values.")
@@ -46,7 +83,15 @@ triangle <- function(a, b, c) {
   stop("Invalid side combos")
 }
 
-## 3D Shape Classes
+#' Create a cuboid object.
+#'
+#' @param height Height of the cuboid.
+#' @param width Width of the cuboid.
+#' @param depth Depth of the cuboid.
+#' @return An object of class 'shape', '3dShape', and 'cuboid'.
+#'
+#' @family 3D Shape Classes
+#' @export
 cuboid <- function(height, width, depth) {
   if(!is.numeric.value(height) || !is.numeric.value(width) || !is.numeric.value(depth)) {
     stop("Height, width and depth must be numeric values.")
@@ -56,6 +101,14 @@ cuboid <- function(height, width, depth) {
   return(cu)
 }
 
+#' Create a cube object.
+#'
+#' @param sideLength Side length of the cube.
+#' @return An object of class 'shape', '3dShape', and 'cube'.
+#'
+#' @family 3D Shape Classes
+#' @seealso \code{\link{cuboid}}
+#' @export
 cube <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
     stop("Side Length must be a numeric value.")
@@ -67,6 +120,13 @@ cube <- function(sideLength){
   return(cub)
 }
 
+#' Create a sphere object.
+#'
+#' @param radius Radius of the sphere.
+#' @return An object of class 'shape', '3dShape', and 'sphere'.
+#'
+#' @family 3D Shape Classes
+#' @export
 sphere <- function(radius){
   if(!is.numeric.value(radius)) {
     stop("Radius must be a numeric value.")
@@ -76,6 +136,15 @@ sphere <- function(radius){
   return(sph)
 }
 
+
+#' Create a cylinder object.
+#'
+#' @param radius Radius of the cylinder.
+#' @param height Height of the cylinder.
+#' @return An object of class 'shape', '3dShape', and 'cylinder'.
+#'
+#' @family 3D Shape Classes
+#' @export
 cylinder <- function(radius, height){
   if(!is.numeric.value(radius) || !is.numeric.value(height)) {
     stop("Radius and height must be numeric values.")
