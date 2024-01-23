@@ -35,13 +35,11 @@ perimeter <- function(shp) {
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
-#' \dontrun{
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 2, width = 4)
 #'
 #' # Calculate the perimeter of the rectangle
 #' perimeter.rectangle(my_rectangle)
-#' }
 #'
 #' @export
 perimeter.rectangle <- function(rect) {
@@ -57,13 +55,11 @@ perimeter.rectangle <- function(rect) {
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
-#' \dontrun{
 #' # Create a square
 #' my_square <- square(sideLength = 5)
 #'
 #' # Calculate the perimeter of the square
 #' perimeter.square(my_square)
-#' }
 #'
 #' @export
 perimeter.square <- function(squ){
