@@ -25,7 +25,7 @@ rectangle <- function(height, width) {
     stop("Height and width must be numeric values.")
   }
   rect <- list(height = height, width = width)
-  class(rect) <- c("rectangle","2dShape", "shape")
+  class(rect) <- c("shape","2dShape", "rectangle")
   return(rect)
 }
 
@@ -47,7 +47,7 @@ square <- function(sideLength){
     stop("Side Length must be a numeric value.")
   }
   squ <- rectangle(sideLength, sideLength)
-  class(squ) <- c("square","2dShape","shape")
+  class(squ) <- c("shape","2dShape","square")
   # Add 'sideLength' attribute for convenience in square-specific calculations
   squ$sideLength <- sideLength
   return(squ)
