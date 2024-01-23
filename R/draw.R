@@ -188,6 +188,8 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 #'
 #' @param sph An object of class 'shape' representing a sphere.
 #' @param color The color of the sphere (default is "#FF0000 or 'red').
+#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' "coord_fixed" "lims"
 #'
 #' @family draw functions
 #'
@@ -250,17 +252,18 @@ draw.cuboid <- function(cub, color =  "red", ...) {
 #'
 #' @param cube An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
+#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' "coord_fixed" "lims"
 #'
 #' @family draw functions
 #'
+#'
 #' @examples
-#' \dontrun{
 #' # Create a cube
 #' my_cube <- cube(sideLength = 5)
 #'
 #' # Draw the cube
 #' draw.cube(my_cube)
-#' }
 #'
 #' @export
 draw.cube <- function(cube, color = "red", ...) {
