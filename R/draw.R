@@ -62,7 +62,7 @@ draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
     y = c(0, 0, rec$height, rec$height)
   )
 
-  #max_dim <- max(rec$height, rec$width)
+  max_dim <- max(rec$height, rec$width)
 
   p <- ggplot(rectangle_data, aes(x, y)) +
     geom_polygon(fill = fillColor, color = color, size = 2) +

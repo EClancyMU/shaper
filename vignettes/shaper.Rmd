@@ -200,6 +200,7 @@ To visualize a rectangle, firstly load the `ggplot2` package and then simply cre
 library(ggplot2)
 draw(s)
 draw(r)
+
 ```
 
 The same command can be used to visualize other 2D shapes such as square, circle and triangle.
