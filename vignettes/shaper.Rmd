@@ -139,8 +139,8 @@ After creating various geometric shapes, we can find out some basic properties a
 
 The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
 ```{r}
-#area(r)
-area.rectangle(r)
+area(r)
+#area.rectangle(r)
 ```
 
 Similarly we can find the area for all others shapes using the same format. 
@@ -151,7 +151,9 @@ Similarly we can find the area for all others shapes using the same format.
 The `perimeter` function calculates the perimeter of a given 2D shape. Just like area function this one as well takes only the object parameter. Here's an example on how to find the perimeter of a circle
 ```{r}
 c <- circle(5)
-perimeter.circle(c)
+perimeter(c)
+perimeter(r)
+#perimeter.circle(c)
 ```
 The same format can be used to find out the perimeter for remaining 2D shapes.
 
@@ -160,7 +162,7 @@ The same format can be used to find out the perimeter for remaining 2D shapes.
 
 The `volume` function calculates the volume of 3D shapes and only takes in the object created to store a 3D shape as a parameter. For example, to find out the volume of a cylinder (cy) which was created above
 ```{r}
-volume.cylinder(cy)
+volume(cy)
 ```
 
 Similarly, we can find the volume of other 3D shapes using the same format.
@@ -174,8 +176,7 @@ The `summary` function in the package provides a convenient way to display key a
 
 For a 2D shape like a rectangle, square, circle or triangle, the `summary` function will display the shape type, its perimeter and its area. Here's an example of using the `summary` function on a rectangle.
 ```{r}
-r <- rectangle(2,3)
-summary.2dShape(r)
+summary(r)
 ```
 
 ### Summary of a 3D shape
@@ -183,7 +184,7 @@ summary.2dShape(r)
 For a 3D shape like cuboid, cube, sphere or a cylinder, the `summary` function will include the shape type, its surface area and volume. For example, to use the `summary` function on a cube
 ```{r}
 cub <- cube(3)
-summary.3dShape(cub)
+summary(cub)
 ```
 
 ## Visualization
@@ -197,8 +198,9 @@ For 2D shapes, such as rectangles, squares, circles, and triangles, the `draw` f
 To visualize a rectangle, firstly load the `ggplot2` package and then simply create the shape and use the draw function
 ```{r}
 library(ggplot2)
-r <- rectangle(2, 3)
-draw.rectangle(r)
+draw(s)
+draw(r)
+
 ```
 
 The same command can be used to visualize other 2D shapes such as square, circle and triangle.
@@ -219,7 +221,7 @@ To visualize a cube, first load the `rgl` package and then create the 3D shape a
 ```{r}
 library(rgl)
 cub <- cube(3)
-draw.cube(cub)
+draw(cub)
 ```
 
 
@@ -231,7 +233,7 @@ The same command can be used to visualize other 3D shapes such as cuboid, sphere
 
 ```{r}
 cub <- cube(3)
-draw.cube(cub, color = "yellow")
+draw(cub, color = "yellow")
 ```
 
 ![](Customised Cube.png){width=600px height=300px}
