@@ -23,16 +23,11 @@
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 4, width = 6)
 #'
-#' # Draw the rectangle
-#' draw(my_rectangle, color = blue, fillColor = "transparent
-#' )
-#'
 #' # Create a sphere
 #' my_sphere <- sphere(radius = 2)
 #'
 #' # Draw the sphere
 #' draw(my_sphere)
-#' }
 #'
 #'@export
 draw <- function(shape, color = "blue", fillColor = "transparent") {
@@ -56,13 +51,11 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #' @seealso \code{\link{draw}}
 #'
 #' @examples
-#' \dontrun{
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 4, width = 6)
 #'
 #' # Draw the rectangle
 #' draw.rectangle(my_rectangle)
-#' }
 draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
   rectangle_data <- data.frame(
     x = c(0, rec$width, rec$width, 0),
@@ -188,8 +181,8 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 #'
 #' @param sph An object of class 'shape' representing a sphere.
 #' @param color The color of the sphere (default is "#FF0000 or 'red').
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
-#' "coord_fixed" "lims"
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' "shade3d" "wire3d"
 #'
 #' @family draw functions
 #'
@@ -204,12 +197,29 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 draw.sphere <- function(sph, color =  "#FF0000",..) {
   open3d()
 
-  spheres3d(0, 0, 0, radius = sph$radius, color = color, alpha = 0.7)
+  sphere3d(0, 0, 0, radius = sph$radius, color = color, alpha = 0.7)
   decorate3d(box = FALSE ,axes = TRUE)
 }
 
 
-
+#' Draw a cuboid in 3D using rgl.
+#'
+#' @param cub An object of class 'shape' representing a cube.
+#' @param color The color of the cube (default is "red").
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' "shade3d" "wire3d"
+#'
+#' @family draw functions
+#'
+#'
+#' @examples
+#' # Create a cube
+#' my_cuboid <- cuboid(height = 3, width = 3, depth = 3)
+#'
+#' # Draw the cube
+#' draw.cuboid(my_cuboid)
+#'
+#' @export
 draw.cuboid <- function(cub, color =  "red", ...) {
   height <- cub$height
   width <- cub$width
@@ -252,8 +262,8 @@ draw.cuboid <- function(cub, color =  "red", ...) {
 #'
 #' @param cube An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
-#' "coord_fixed" "lims"
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' "shade3d" "wire3d"
 #'
 #' @family draw functions
 #'
@@ -306,8 +316,8 @@ draw.cube <- function(cube, color = "red", ...) {
 #' @param cyl An object of class 'shape' representing a cylinder.
 #' @param color The color of the cylinder (default is "red").
 #'
-#' @importFrom rgl "open3d" "sphere3d" "decorate3d" "cylinder" "qmesh3d"
-#' "shade3d" and "wire3d"
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "qmesh3d"
+#' "shade3d" "mesh3d" "wire3d"
 #'
 #' @family draw functions
 #'

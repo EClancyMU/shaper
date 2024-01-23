@@ -48,10 +48,10 @@ summary.2dShape <- function(shp){
 #'
 #' @examples
 #' # Create a cylinder
-#' my_cylinder <- cylinder(radius = 2, height = 5)
+#' my_cylinder1 <- cylinder(radius = 2, height = 5)
 #'
 #' # Generate a summary for the cylinder
-#' summary.3dShape(my_cylinder)
+#' summary.3dShape(my_cylinder1)
 #'
 #' @export
 summary.3dShape <- function(shp){
