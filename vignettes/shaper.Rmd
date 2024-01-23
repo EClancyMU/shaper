@@ -139,8 +139,8 @@ After creating various geometric shapes, we can find out some basic properties a
 
 The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
 ```{r}
-#area(r)
-area.rectangle(r)
+area(r)
+#area.rectangle(r)
 ```
 
 Similarly we can find the area for all others shapes using the same format. 
