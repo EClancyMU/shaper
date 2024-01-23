@@ -20,14 +20,15 @@ an error indicating that the input must be an object of class 'shape'. If the in
 of class 'shape', it dispatches the calculation to the appropriate method based on the
 type of shape.
 }
-\examples{
-# Create a rectangle object
-rectangle <- list(height = 4, width = 6)
-class(rectangle) <- "shape"
-
-# Calculate the area of the rectangle
-area(rectangle)
-
-
+\seealso{
+Other area functions: 
+\code{\link{area.circle}()},
+\code{\link{area.cube}()},
+\code{\link{area.cuboid}()},
+\code{\link{area.cylinder}()},
+\code{\link{area.rectangle}()},
+\code{\link{area.sphere}()},
+\code{\link{area.square}()},
+\code{\link{area.triangle}()}
 }
 \concept{area functions}
