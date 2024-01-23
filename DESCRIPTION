@@ -3,9 +3,9 @@ Type: Package
 Title: Create and Visualise basic 2D and 3D shapes.
 Version: 0.1.0
 Author: Who wrote it
-Authors@R: c(person("Eoghan", "Clancy", email="John.Doe@mu.ie", role=c("aut", "cre")), 
+Authors@R: c(person("Eoghan", "Clancy", email="John.Doe@mu.ie", role=c("aut", "cre"), 
 person("Sheriff Timilehin", "Oyadina", email="timilehin.oyadina@gmail.com", role=c("ctb", "aut")), 
-person("Saisampath", "Adusumilli", email="adusumillisampath@yahoo.in", role=c("ctb", "aut")))
+person("Saisampath", "Adusumilli", email="adusumillisampath@yahoo.in", role=c("ctb", "aut"))
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Shaper is an R package designed for the creation, analysis, and
     visualization of fundamental two-dimensional (2D)
