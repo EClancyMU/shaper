@@ -209,7 +209,7 @@ Users can also pass in other attributes such as color of the shape (outline of t
 Here's the same rectangle with different color and fill values.
 ```{r}
 r <- rectangle(2, 3)
-draw.rectangle(r, color = "green", fill = "red")
+draw.rectangle(r, color = "green", fillColor = "red")
 ```
 
 ### Drawing 3D shapes

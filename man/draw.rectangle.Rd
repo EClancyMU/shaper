@@ -22,6 +22,7 @@ my_rectangle <- rectangle(height = 4, width = 6)
 
 # Draw the rectangle
 draw.rectangle(my_rectangle)
+
 }
 \seealso{
 \code{\link{draw}}
