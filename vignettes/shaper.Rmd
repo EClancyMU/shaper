@@ -47,7 +47,6 @@ shaper will run in Windows, Mac OS X, or Linux. To install it you first need to 
 Once in R you can type at the R command prompt:
 
 ```{r, eval=FALSE}
-detach("package:devtools", character.only=TRUE, force=TRUE)
 install.packages('devtools')
 devtools::install_github('EClancyMU/shaper')
 ```
