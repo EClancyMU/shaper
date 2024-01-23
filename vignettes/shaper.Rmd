@@ -137,30 +137,27 @@ After creating various geometric shapes, we can find out some basic properties a
 
 ### Calculating Area
 
-The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section
+The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section.
 ```{r}
 area(r)
-#area.rectangle(r)
 ```
 
-Similarly we can find the area for all others shapes using the same format. 
+Similarly we can find the area for all others shapes using the same format by passing the object of a particular shape created. 
 
 
 ### Calculating Perimeter (For 2D Shapes)
 
-The `perimeter` function calculates the perimeter of a given 2D shape. Just like area function this one as well takes only the object parameter. Here's an example on how to find the perimeter of a circle
+The `perimeter` function calculates the perimeter of a given 2D shape. Just like area function this one as well takes only the object parameter. Here's an example on how to find the perimeter of a circle which was created earlier.
 ```{r}
-c <- circle(5)
 perimeter(c)
-perimeter(r)
-#perimeter.circle(c)
 ```
+
 The same format can be used to find out the perimeter for remaining 2D shapes.
 
 
 ### Calculating Volume (For 3D Shapes)
 
-The `volume` function calculates the volume of 3D shapes and only takes in the object created to store a 3D shape as a parameter. For example, to find out the volume of a cylinder (cy) which was created above
+The `volume` function calculates the volume of 3D shapes and only takes in the object created to store a 3D shape as a parameter. For example, to find out the volume of a cylinder (cy) which was created above.
 ```{r}
 volume(cy)
 ```
@@ -176,6 +173,7 @@ The `summary` function in the package provides a convenient way to display key a
 
 For a 2D shape like a rectangle, square, circle or triangle, the `summary` function will display the shape type, its perimeter and its area. Here's an example of using the `summary` function on a rectangle.
 ```{r}
+r <- rectangle(2,3)
 summary(r)
 ```
 
@@ -198,7 +196,7 @@ For 2D shapes, such as rectangles, squares, circles, and triangles, the `draw` f
 To visualize a rectangle, firstly load the `ggplot2` package and then simply create the shape and use the draw function
 ```{r}
 library(ggplot2)
-draw(s)
+r <- rectangle(2,3)
 draw(r)
 ```
 
@@ -206,9 +204,8 @@ The same command can be used to visualize other 2D shapes such as square, circle
 
 Users can also pass in other attributes such as color of the shape (outline of the shape) as well can fill color inside the shape with the default values being "blue" and "transparent" respectively.
 
-Here's the same rectangle with different color and fill values.
+Here's the same rectangle with different color and fillColor values.
 ```{r}
-r <- rectangle(2, 3)
 draw(r, color = "green", fillColor = "red")
 ```
 
@@ -228,11 +225,11 @@ This command will open a new window displaying the 3D cube which can be interact
 
 ![](Default Cube.png){width=600px height=300px}
 
-The same command can be used to visualize other 3D shapes such as cuboid, sphere and cylinder and just like 2D shapes, users can also change the color of the 3D by changing the value of the color attribute with the default being "red"
+The same command can be used to visualize other 3D shapes such as cuboid, sphere and cylinder and just like 2D shapes, users can also change the color of the 3D by changing the value of the color attribute with the default being "red". Here's an example of cylinder with different color instead of the default color "red"
 
 ```{r}
-cub <- cube(3)
-draw(cub, color = "yellow")
+cy <- cylinder(3,5)
+draw(cy, color = "yellow")
 ```
 
-![](Customised Cube.png){width=600px height=300px}
+![](Customised Cylinder.png){width=600px height=300px}
