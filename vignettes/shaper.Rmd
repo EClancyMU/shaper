@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-`shaper` is an R package which allows to create, analyze and visualize some basic two-dimensional (2D) and three-dimensional (3D) shapes. Our journey through this vignette will take us from basic constructs of simple shapes like squares and circles, to the more complex realms of cuboids and spheres.
+`shaper` is an R package which allows one to create, analyze and visualize some basic two-dimensional (2D) and three-dimensional (3D) shapes. Our journey through this vignette will take us from the basic construction of simple shapes like squares and circles, to the more complex realms of cuboids and spheres.
 
 ## Background
 
@@ -69,7 +69,7 @@ This section will guide you through creating basic 2D and 3D shapes. Let's explo
 
 __Rectangle__
 
-Create a rectangle by specifying the its height and width. For example, to create a rectangle of height 2 and width 3
+Create a rectangle by specifying its height and width. For example, to create a rectangle of height 2 and width 3
 
 ```{r}
 r <- rectangle(2,3)
@@ -137,12 +137,13 @@ After creating various geometric shapes, we can find out some basic properties a
 
 ### Calculating Area
 
-The `area` function is used to calculate the area of both 2D and 3D shapes. It only takes one parameter which is the object created to store a shape. For example, to calculate the area of a rectangle created in the earlier section.
+The `area` function is used to calculate the area of both 2D and 3D shapes, but behaves differently depending on sape type. For 2D shapes area is returned, whereas for 3D shapes surface area is returned. It takes shape object as its parameter. For example, to calculate the area of a rectangle created in the earlier section.
+
 ```{r}
 area(r)
 ```
 
-Similarly we can find the area for all others shapes using the same format by passing the object of a particular shape created. 
+Similarly we can find the area for all other supported shapes using the same format of passing the object of said shape. 
 
 
 ### Calculating Perimeter (For 2D Shapes)
@@ -157,7 +158,7 @@ The same format can be used to find out the perimeter for remaining 2D shapes.
 
 ### Calculating Volume (For 3D Shapes)
 
-The `volume` function calculates the volume of 3D shapes and only takes in the object created to store a 3D shape as a parameter. For example, to find out the volume of a cylinder (cy) which was created above.
+The `volume` function calculates the volume of 3D shapes. It takes in a 3D object as a paramter. For example, to find out the volume of a cylinder (cy) which was created above.
 ```{r}
 volume(cy)
 ```
@@ -187,7 +188,7 @@ summary(cub)
 
 ## Visualization
 
-Visualization is a crucial aspect when working with geometric shapes and the `draw` function this package provides capabilities to visualize both 2D and 3D shapes.
+Visualization is a crucial aspect when working with geometric shapes and the `draw` function provided by this package has capabilities to visualize both 2D and 3D shapes.
 
 ### Drawing 2D shapes
 
@@ -202,7 +203,7 @@ draw(r)
 
 The same command can be used to visualize other 2D shapes such as square, circle and triangle.
 
-Users can also pass in other attributes such as color of the shape (outline of the shape) as well can fill color inside the shape with the default values being "blue" and "transparent" respectively.
+Users can also pass in other attributes such as color of the shape (ie border shape) aswell as fillColor (ie inside color) with the default values being "blue" and "transparent" respectively.
 
 Here's the same rectangle with different color and fillColor values.
 ```{r}
@@ -211,7 +212,7 @@ draw(r, color = "green", fillColor = "red")
 
 ### Drawing 3D shapes
 
-For 3D shapes like cuboid, cube, sphere and cylinder, the `draw` function leverages the `rgl` package to render these shapes in three-dimensional space.
+For 3D shapes like cuboid, cube, sphere and cylinder, the `draw` function leverages the `rgl` package to render an interactive representation of the specified shape in three-dimensional space.
 
 To visualize a cube, first load the `rgl` package and then create the 3D shape and call in the draw function
 ```{r}
