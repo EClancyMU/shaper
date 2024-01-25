@@ -150,8 +150,8 @@ area.cuboid <- function(shp){
 #' area.cube(my_cube1)
 #'
 #' @export
-area.shpe <- function(shp){
-  return(6 * shpb$sideLength * shpb$sideLength)
+area.cube <- function(shp){
+  return(6 * shp$sideLength * shp$sideLength)
 }
 
 

@@ -25,7 +25,7 @@ volume <- function(shp) {
 
 #' Calculate the volume of a cuboid.
 #'
-#' @param cu An object of class '3dShape' representing a cuboid with dimensions
+#' @param shp An object of class '3dShape' representing a cuboid with dimensions
 #' height, width, and depth.
 #' @return The volume of the cuboid.
 #'
@@ -45,7 +45,7 @@ volume.cuboid <- function(shp){
 
 #' Calculate the volume of a cube.
 #'
-#' @param cub An object of class '3dShape' representing a cube with side length.
+#' @param shp An object of class '3dShape' representing a cube with side length.
 #' @return The volume of the cube.
 #'
 #' @family volume functions
@@ -64,7 +64,7 @@ volume.cube <- function(shp){
 
 #' Calculate the volume of a sphere.
 #'
-#' @param sph An object of class '3dShape' representing a sphere with radius.
+#' @param shp An object of class '3dShape' representing a sphere with radius.
 #' @return The volume of the sphere.
 #'
 #' @family volume functions
@@ -83,7 +83,7 @@ volume.sphere <- function(shp){
 
 #' Calculate the volume of a cylinder.
 #'
-#' @param cyl An object of class '3dShape' representing a cylinder with radius and height.
+#' @param shp An object of class '3dShape' representing a cylinder with radius and height.
 #' @return The volume of the cylinder.
 #'
 #' @family volume functions
