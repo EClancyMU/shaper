@@ -44,7 +44,7 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #' @param rec An object of class 'shape' representing a rectangle.
 #' @param color The border color of the rectangle (default is "blue").
 #' @param fillColor The fill color of the rectangle (default is "transparent").
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' @importFrom ggplot2 "ggplot" "aes" "geom_polygon" "labs" "theme_minimal"
 #' "coord_fixed" "lims"
 #'
 #' @family draw functions
@@ -82,7 +82,7 @@ draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
 #' @param squ An object of class 'shape' representing a square.
 #' @param color The border color of the square (default is "blue").
 #' @param fillColor The fill color of the square (default is "transparent").
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' @importFrom ggplot2 "ggplot" "aes" "geom_polygon" "labs" "theme_minimal"
 #' "coord_fixed" "lims"
 #' @family draw functions
 #' @seealso \code{\link{draw}}
@@ -116,7 +116,7 @@ draw.square <- function(squ, color = "blue", fillColor = "transparent") {
 #' @param triangle An object of class 'shape' representing a triangle.
 #' @param color The border color of the triangle (default is "blue").
 #' @param fillColor The fill color of the triangle (default is "transparent").
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' @importFrom ggplot2 "ggplot" "aes" "geom_polygon" "labs" "theme_minimal"
 #' "coord_fixed" "lims"
 #' @family draw functions
 #'
@@ -151,7 +151,7 @@ draw.triangle <- function(triangle, color = "blue", fillColor = "transparent") {
 #' @param circle An object of class 'shape' representing a circle.
 #' @param color The border color of the circle (default is "blue").
 #' @param fillColor The fill color of the circle (default is "transparent").
-#' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
+#' @importFrom ggplot2 "ggplot" "aes" "geom_polygon" "labs" "theme_minimal"
 #' "coord_fixed" "lims"
 #'
 #' @family draw functions
@@ -196,7 +196,7 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 #' draw.sphere(my_sphere)
 #'
 #' @export
-draw.sphere <- function(sph, color =  "#FF0000",..) {
+draw.sphere <- function(sph, color =  "#FF0000",...) {
   open3d()
 
   sphere3d(0, 0, 0, radius = sph$radius, color = color, alpha = 0.7)

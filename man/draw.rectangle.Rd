@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw.R
 \name{draw.rectangle}
 \alias{draw.rectangle}
-\title{Draw a rectangle in 2d hmm.}
+\title{Draw a rectangle in 2d.}
 \usage{
 \method{draw}{rectangle}(rec, color = "blue", fillColor = "transparent")
 }
@@ -14,7 +14,7 @@
 \item{fillColor}{The fill color of the rectangle (default is "transparent").}
 }
 \description{
-Draw a rectangle in 2d hmm.
+Draw a rectangle in 2d.
 }
 \examples{
 # Create a rectangle
