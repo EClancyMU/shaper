@@ -28,7 +28,7 @@ perimeter <- function(shp) {
 
 #' Calculate the perimeter of a rectangle.
 #'
-#' @param rect An object of class '2dShape' representing a rectangle.
+#' @param shp An object of class '2dShape' representing a rectangle.
 #' @return The perimeter of the rectangle.
 #'
 #' @family perimeter functions
@@ -44,13 +44,13 @@ perimeter <- function(shp) {
 #' }
 #'
 #' @export
-perimeter.rectangle <- function(rect) {
-  return(2 * rect$height + 2 * rect$width)
+perimeter.rectangle <- function(shp) {
+  return(2 * shp$height + 2 * shp$width)
 }
 
 #' Calculate the perimeter of a square.
 #'
-#' @param squ An object of class '2dShape' representing a square.
+#' @param shp An object of class '2dShape' representing a square.
 #' @return The perimeter of the square.
 #'
 #' @family perimeter functions
@@ -66,13 +66,13 @@ perimeter.rectangle <- function(rect) {
 #' }
 #'
 #' @export
-perimeter.square <- function(squ){
-  return(4 * squ$sideLength)
+perimeter.square <- function(shp){
+  return(4 * shp$sideLength)
 }
 
 #' Calculate the perimeter of a circle.
 #'
-#' @param circ An object of class '2dShape' representing a circle.
+#' @param shp An object of class '2dShape' representing a circle.
 #' @return The perimeter of the circle.
 #'
 #' @family perimeter functions
@@ -86,13 +86,13 @@ perimeter.square <- function(squ){
 #' perimeter.circle(my_circle)
 #'
 #' @export
-perimeter.circle <- function(circ) {
-  return(2 * pi * circ$radius)
+perimeter.circle <- function(shp) {
+  return(2 * pi * shp$radius)
 }
 
 #' Calculate the perimeter of a triangle.
 #'
-#' @param tri An object of class '2dShape' representing a triangle.
+#' @param shp An object of class '2dShape' representing a triangle.
 #' @return The perimeter of the triangle.
 #'
 #' @family perimeter functions
@@ -106,7 +106,7 @@ perimeter.circle <- function(circ) {
 #' perimeter.triangle(my_triangle)
 #'
 #' @export
-perimeter.triangle <- function(tri) {
-  return(tri$a + tri$b + tri$c)
+perimeter.triangle <- function(shp) {
+  return(shp$a + shp$b + shp$c)
 }
 
