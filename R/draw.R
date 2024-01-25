@@ -59,6 +59,8 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @export
 draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
+  x <- y <- NULL  # Dummy definitions
+
   rectangle_data <- data.frame(
     x = c(0, shape$width, shape$width, 0),
     y = c(0, 0, shape$height, shape$height)
@@ -96,6 +98,8 @@ draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @export
 draw.square <- function(shape, color = "blue", fillColor = "transparent") {
+  x <- y <- NULL  # Dummy definitions
+
   square_data <- data.frame(
     x = c(0, shape$sideLength, shape$sideLength, 0),
     y = c(0, 0, shape$sideLength, shape$sideLength)
@@ -129,6 +133,8 @@ draw.square <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @export
 draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
+  x <- y <- NULL  # Dummy definitions
+
   triangle_data <- data.frame(
     x = c(0, shape$a, shape$b),
     y = c(0, 0, shape$c)
@@ -154,6 +160,7 @@ draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
 #' @importFrom ggplot2 "ggplot" "aes" "geom_polygon" "labs" "theme_minimal"
 #' "coord_fixed" "lims"
 #'
+#'
 #' @family draw functions
 #'
 #' @examples
@@ -165,6 +172,8 @@ draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @export
 draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
+  x <- y <- NULL  # Dummy definitions
+
   circle_data <- data.frame(
     x = shape$radius * cos(seq(0, 2 * pi, length.out = 100)),
     y = shape$radius * sin(seq(0, 2 * pi, length.out = 100))
@@ -183,8 +192,10 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @param shape An object of class 'shape' representing a sphere.
 #' @param color The color of the sphere (default is "#FF0000 or 'red').
-#' @param ... Additional arguments passed to `sphere3d` and other underlying functions.
-#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' @param ... Additional arguments passed to `sphere3d` and other
+#'  underlying functions.
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d"
+#' "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
 #'
 #' @family draw functions
@@ -197,10 +208,10 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #' draw.sphere(my_sphere)
 #'
 #' @export
-draw.sphere <- function(sph, color =  "#FF0000",...) {
+draw.sphere <- function(shape, color =  "#FF0000",...) {
   open3d()
 
-  sphere3d(0, 0, 0, radius = shape$radius, color = color, alpha = 0.7)
+  spheres3d(0, 0, 0, radius = shape$radius, color = color, alpha = 0.7)
   decorate3d(box = FALSE ,axes = TRUE)
 }
 
@@ -210,7 +221,8 @@ draw.sphere <- function(sph, color =  "#FF0000",...) {
 #' @param shape An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
 #' @param ... Additional arguments passed to underlying rgl functions.
-#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d"
+#'  "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
 #'
 #' @family draw functions
@@ -267,7 +279,8 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #' @param shape An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
 #' @param ... Additional arguments passed to underlying rgl functions.
-#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
+#' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d"
+#'  "qmesh3d"
 #' "shade3d" "wire3d"
 #'
 #' @family draw functions
