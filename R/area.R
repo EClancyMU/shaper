@@ -1,7 +1,7 @@
 #' Calculate the area of various 2D and 3D shapes.
 #'
 #' This provides functions to calculate the area of various 2D and 3D shapes,
-#' specifically rectangles, squares, circles, triangles, cuboids, cubes, spheres, and cylinders.
+#' specifically rectangles, shpares, circles, triangles, cuboids, cubes, spheres, and cylinders.
 #' The area can be calculated based on the dimensions of each shape.
 #'
 #' @param shp An object of class 'shape'.
@@ -24,7 +24,7 @@ area <- function(shp) {
 
 #' Calculate the area of a rectangle.
 #'
-#' @param rect An object of class 'shape' representing a rectangle.
+#' @param shp An object of class 'shape' representing a rectangle.
 #' @return The area of the rectangle.
 #'
 #' @family area functions
@@ -34,44 +34,44 @@ area <- function(shp) {
 #' # Create a rectangle object
 #' my_rectangle <- rectangle(height = 2,width = 4)
 #'
-#' # Calculate the area of the rectangle
+#' # Calculate the area of the shpangle
 #' area.rectangle(my_rectangle)
 #'
 #' @export
 
-area.rectangle <- function(rect) {
-  return(rect$height * rect$width)
+area.rectangle <- function(shp) {
+  return(shp$height * shp$width)
 }
 
 
 
 #' Calculate the area of a square.
 #'
-#' @param squ An object of class 'shape' representing a square.
-#' @return The area of the square.
+#' @param shp An object of class 'shape' representing a shpare.
+#' @return The area of the shpare.
 #'
 #' @family area functions
 #' @seealso \code{\link{area}}
 #'
 #' @examples
-#' # Create a square object
-#' my_square1 <- square(sideLength = 5)
+#' # Create a shpare object
+#' my_shpare1 <- shpare(sideLength = 5)
 #'
 #'
-#' # Calculate the area of the square
-#' area.square(my_square1)
+#' # Calculate the area of the shpare
+#' area.shpare(my_shpare1)
 #'
 #'
 #' @export
-area.square <- function(squ){
-  return(squ$sideLength * squ$sideLength)
+area.square <- function(shp){
+  return(shp$sideLength * shp$sideLength)
 }
 
 
 
 #' Calculate the area of a circle.
 #'
-#' @param circ An object of class 'shape' representing a circle.
+#' @param shp An object of class 'shape' representing a circle.
 #' @return The area of the circle.
 #'
 #' @family area functions
@@ -85,13 +85,13 @@ area.square <- function(squ){
 #' area.circle(my_circle)
 #'
 #' @export
-area.circle <- function(circ) {
-  return(pi*circ$radius^2)
+area.circle <- function(shp) {
+  return(pi*shp$radius^2)
 }
 
 #' Calculate the area of a triangle using Heron's formula.
 #'
-#' @param tri An object of class 'shape' representing a triangle with sides a, b, and c.
+#' @param shp An object of class 'shape' representing a triangle with sides a, b, and c.
 #' @return The area of the triangle.
 #'
 #' @family area functions
@@ -106,16 +106,16 @@ area.circle <- function(circ) {
 #'
 #'
 #' @export
-area.triangle <- function(tri) {
-  s <- perimeter(tri)/2
-  Area <- sqrt(s*(s-tri$a)*(s-tri$b)*(s-tri$c)) #Heron's formula
+area.triangle <- function(shp) {
+  s <- perimeter(shp)/2
+  Area <- sqrt(s*(s-shp$a)*(s-shp$b)*(s-shp$c)) #Heron's formula
   return(Area)
 }
 
 #3D - these are surface areas
 #' Calculate the surface area of a cuboid.
 #'
-#' @param cu An object of class 'shape' representing a cuboid with dimensions depth, width, and height.
+#' @param shp An object of class 'shape' representing a cuboid with dimensions depth, width, and height.
 #' @return The surface area of the cuboid.
 #'
 #' @family area functions
@@ -129,14 +129,14 @@ area.triangle <- function(tri) {
 #' area.cuboid(my_cuboid1)
 #'
 #' @export
-area.cuboid <- function(cu){
-  return(2 * (cu$depth * cu$width + cu$depth * cu$height + cu$height * cu$width))
+area.cuboid <- function(shp){
+  return(2 * (shp$depth * shp$width + shp$depth * shp$height + shp$height * shp$width))
 }
 
 
 #' Calculate the surface area of a cube.
 #'
-#' @param cub An object of class 'shape' representing a cube with side length.
+#' @param shp An object of class 'shape' representing a cube with side length.
 #' @return The surface area of the cube.
 #'
 #' @family area functions
@@ -150,35 +150,35 @@ area.cuboid <- function(cu){
 #' area.cube(my_cube1)
 #'
 #' @export
-area.cube <- function(cub){
-  return(6 * cub$sideLength * cub$sideLength)
+area.shpe <- function(shp){
+  return(6 * shpb$sideLength * shpb$sideLength)
 }
 
 
 #' Calculate the surface area of a sphere.
 #'
-#' @param sph An object of class 'shape' representing a sphere with radius.
-#' @return The surface area of the sphere.
+#' @param shp An object of class 'shape' representing a shpere with radius.
+#' @return The surface area of the shpere.
 #'
 #' @family area functions
 #' @seealso \code{\link{area}}
 #'
 #' @examples
-#' # Create a sphere object
-#' my_sphere <- sphere(radius = 2)
+#' # Create a shpere object
+#' my_shpere <- shpere(radius = 2)
 #'
-#' # Calculate the surface area of the sphere
-#' area.sphere(my_sphere)
+#' # Calculate the surface area of the shpere
+#' area.shpere(my_shpere)
 
 #' @export
-area.sphere <- function(sph){
-  return(4*pi*sph$radius^2)
+area.sphere <- function(shp){
+  return(4*pi*shp$radius^2)
 }
 
 
 #' Calculate the surface area of a cylinder.
 #'
-#' @param cyl An object of class 'shape' representing a cylinder with radius and height.
+#' @param shp An object of class 'shape' representing a cylinder with radius and height.
 #' @return The surface area of the cylinder.
 #'
 #' @family area functions
@@ -192,6 +192,6 @@ area.sphere <- function(sph){
 #' area.cylinder(my_cylinder)
 #'
 #' @export
-area.cylinder <- function(cyl){
-  return(2*pi*cyl$radius*(cyl$radius+cyl$height))
+area.cylinder <- function(shp){
+  return(2*pi*shp$radius*(shp$radius+shp$height))
 }
