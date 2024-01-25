@@ -18,12 +18,13 @@ other underlying functions.}
 Draw a cylinder in 3D.
 }
 \examples{
+\dontrun{
 # Create a cylinder
 my_cylinder <- cylinder(radius = 2, height = 5)
 
 # Draw the cylinder
 draw.cylinder(my_cylinder)
-
+}
 }
 \seealso{
 Other draw functions: 

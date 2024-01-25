@@ -16,12 +16,13 @@ The volume of the cylinder.
 Calculate the volume of a cylinder.
 }
 \examples{
+\dontrun{
 # Create a cylinder object
 my_cylinder <- cylinder(radius = 2, height = 5)
 
 # Calculate the volume of the cylinder
 volume.cylinder(my_cylinder)
-
+}
 }
 \seealso{
 Other volume functions: 

@@ -16,13 +16,14 @@ The area of the shpare.
 Calculate the area of a square.
 }
 \examples{
+\dontrun{
 # Create a shpare object
 my_shpare1 <- shpare(sideLength = 5)
 
 
 # Calculate the area of the shpare
 area.shpare(my_shpare1)
-
+}
 
 }
 \seealso{

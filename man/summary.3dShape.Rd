@@ -16,12 +16,13 @@ Name of the shape, area and Volume
 Generate a summary of the parameters for 3D shapes.
 }
 \examples{
+\dontrun{
 # Create a cylinder
 my_cylinder1 <- cylinder(radius = 2, height = 5)
 
 # Generate a summary for the cylinder
 summary.3dShape(my_cylinder1)
-
+}
 }
 \seealso{
 Other summary functions: 

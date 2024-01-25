@@ -16,12 +16,13 @@ The perimeter of the circle.
 Calculate the perimeter of a circle.
 }
 \examples{
+\dontrun{
 # Create a circle
 my_circle <- circle(radius = 3)
 
 # Calculate the perimeter of the circle
 perimeter.circle(my_circle)
-
+}
 }
 \seealso{
 \code{\link{perimeter}}

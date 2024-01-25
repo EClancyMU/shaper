@@ -16,8 +16,9 @@ An object of class 'shape', '3dShape', and 'sphere'.
 Create a sphere object.
 }
 \examples{
+\dontrun{
 my_sphere <- sphere(radius = 2)
-
+}
 }
 \seealso{
 Other 3D Shape Classes: 

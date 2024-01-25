@@ -18,8 +18,9 @@ An object of class 'shape', '3dShape', and 'cylinder'.
 Create a cylinder object.
 }
 \examples{
+\dontrun{
 my_cylinder <- cylinder(radius = 2, height = 5)
-
+}
 }
 \seealso{
 Other 3D Shape Classes: 

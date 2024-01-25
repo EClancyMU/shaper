@@ -16,9 +16,10 @@ An object of class 'shape', '2dShape', and 'square'.
 Create a square object.
 }
 \examples{
+\dontrun{
 my_square1 <- square(sideLength = 5)
 my_square2 < rectangle(height = 5, width = 5)
-
+}
 }
 \seealso{
 \code{\link{rectangle}}

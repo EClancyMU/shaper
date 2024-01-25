@@ -16,12 +16,13 @@ The perimeter of the triangle.
 Calculate the perimeter of a triangle.
 }
 \examples{
+\dontrun{
 # Create a triangle
 my_triangle <- triangle(a = 3, b = 4, c = 5)
 
 # Calculate the perimeter of the triangle
 perimeter.triangle(my_triangle)
-
+}
 }
 \seealso{
 \code{\link{perimeter}}

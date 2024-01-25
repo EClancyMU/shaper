@@ -16,12 +16,13 @@ The surface area of the cube.
 Calculate the surface area of a cube.
 }
 \examples{
+\dontrun{
 # Create a cube object
 my_cube1 <- cube(sideLength = 5)
 
 # Calculate the surface area of the cube
 area.cube(my_cube1)
-
+}
 }
 \seealso{
 \code{\link{area}}

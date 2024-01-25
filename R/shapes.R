@@ -17,8 +17,9 @@ is.numeric.value <- function(x) {
 #' @family 2D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_rectangle <- rectangle(height = 2,width = 4)
-#'
+#' }
 #' @export
 rectangle <- function(height, width) {
   if(!is.numeric.value(height) | !is.numeric.value(width)) {
@@ -38,9 +39,10 @@ rectangle <- function(height, width) {
 #' @seealso \code{\link{rectangle}}
 #'
 #' @examples
+#' \dontrun{
 #' my_square1 <- square(sideLength = 5)
 #' my_square2 < rectangle(height = 5, width = 5)
-#'
+#' }
 #' @export
 square <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
@@ -61,7 +63,9 @@ square <- function(sideLength){
 #' @family 2D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_circle <- circle(radius = 3)
+#' }
 #'
 #' @export
 circle <- function(radius){
@@ -84,7 +88,9 @@ circle <- function(radius){
 #' @family 2D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_triangle <- triangle(a = 3, b = 4, c = 5)
+#' }
 #'
 #' @export
 triangle <- function(a, b, c) {
@@ -110,8 +116,9 @@ triangle <- function(a, b, c) {
 #' @family 3D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_cuboid1 <- cuboid(height = 3, width = 4, depth = 5)
-#'
+#' }
 #'
 #' @export
 cuboid <- function(height, width, depth) {
@@ -132,9 +139,10 @@ cuboid <- function(height, width, depth) {
 #' @seealso \code{\link{cuboid}}
 #'
 #' @examples
+#' \dontrun{
 #' my_cube1 <- cube(sideLength = 5)
 #' my_cube2 <- cuboid(height = 3, width = 3, depth = 3)
-#'
+#' }
 #' @export
 cube <- function(sideLength){
   if(!is.numeric.value(sideLength)) {
@@ -155,8 +163,9 @@ cube <- function(sideLength){
 #' @family 3D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_sphere <- sphere(radius = 2)
-#'
+#' }
 #' @export
 sphere <- function(radius){
   if(!is.numeric.value(radius)) {
@@ -177,8 +186,9 @@ sphere <- function(radius){
 #' @family 3D Shape Classes
 #'
 #' @examples
+#' \dontrun{
 #' my_cylinder <- cylinder(radius = 2, height = 5)
-#'
+#' }
 #' @export
 cylinder <- function(radius, height){
   if(!is.numeric.value(radius) | !is.numeric.value(height)) {

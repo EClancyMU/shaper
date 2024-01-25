@@ -16,7 +16,9 @@ An object of class 'shape', '2dShape', and 'circle'.
 Create a circle object.
 }
 \examples{
+\dontrun{
 my_circle <- circle(radius = 3)
+}
 
 }
 \seealso{

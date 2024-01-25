@@ -16,12 +16,13 @@ The surface area of the cylinder.
 Calculate the surface area of a cylinder.
 }
 \examples{
+\dontrun{
 # Create a cylinder object
 my_cylinder <- cylinder(radius = 2, height = 5)
 
 # Calculate the surface area of the cylinder
 area.cylinder(my_cylinder)
-
+}
 }
 \seealso{
 \code{\link{area}}

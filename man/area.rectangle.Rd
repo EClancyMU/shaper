@@ -16,12 +16,13 @@ The area of the rectangle.
 Calculate the area of a rectangle.
 }
 \examples{
+\dontrun{
 # Create a rectangle object
 my_rectangle <- rectangle(height = 2,width = 4)
 
 # Calculate the area of the shpangle
 area.rectangle(my_rectangle)
-
+}
 }
 \seealso{
 \code{\link{area}}

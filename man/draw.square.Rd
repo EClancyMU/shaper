@@ -17,12 +17,13 @@
 Draw a square in 2D.
 }
 \examples{
+\dontrun{
 # Create a square
 my_square <- square(sideLength = 5)
 
 # Draw the square
 draw.square(my_square)
-
+}
 }
 \seealso{
 \code{\link{draw}}

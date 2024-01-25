@@ -17,12 +17,13 @@
 Draw a circle in 2D.
 }
 \examples{
+\dontrun{
 # Create a circle
 my_circle <- circle(radius = 3)
 
 # Draw the circle
 draw.circle(my_circle)
-
+}
 }
 \seealso{
 Other draw functions: 

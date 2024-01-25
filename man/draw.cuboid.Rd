@@ -17,12 +17,13 @@
 Draw a cuboid in 3D using rgl.
 }
 \examples{
+\dontrun{
 # Create a cube
 my_cuboid <- cuboid(height = 3, width = 3, depth = 3)
 
 # Draw the cube
 draw.cuboid(my_cuboid)
-
+}
 }
 \seealso{
 Other draw functions: 

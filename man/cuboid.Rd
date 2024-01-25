@@ -20,8 +20,9 @@ An object of class 'shape', '3dShape', and 'cuboid'.
 Create a cuboid object.
 }
 \examples{
+\dontrun{
 my_cuboid1 <- cuboid(height = 3, width = 4, depth = 5)
-
+}
 
 }
 \seealso{

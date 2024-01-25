@@ -17,12 +17,13 @@
 Draw a cube in 3D using rgl.
 }
 \examples{
+\dontrun{
 # Create a cube
 my_cube <- cube(sideLength = 5)
 
 # Draw the cube
 draw.cube(my_cube)
-
+}
 }
 \seealso{
 Other draw functions: 

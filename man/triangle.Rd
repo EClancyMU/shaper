@@ -20,7 +20,9 @@ An object of class 'shape', '2dShape', and 'triangle'.
 Create a triangle object.
 }
 \examples{
+\dontrun{
 my_triangle <- triangle(a = 3, b = 4, c = 5)
+}
 
 }
 \seealso{

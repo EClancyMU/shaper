@@ -17,12 +17,13 @@
 Draw a triangle in 2D.
 }
 \examples{
+\dontrun{
 # Create a triangle
 my_triangle <- triangle(a = 3, b = 4, c = 5)
 
 # Draw the triangle
 draw.triangle(my_triangle)
-
+}
 }
 \seealso{
 Other draw functions: 

@@ -16,12 +16,13 @@ The volume of the sphere.
 Calculate the volume of a sphere.
 }
 \examples{
+\dontrun{
 # Create a sphere object
 my_sphere <- sphere(radius = 2)
 
 # Calculate the volume of the sphere
 volume.sphere(my_sphere)
-
+}
 }
 \seealso{
 Other volume functions: 

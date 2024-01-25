@@ -16,12 +16,13 @@ The perimeter of the rectangle.
 Calculate the perimeter of a rectangle.
 }
 \examples{
+\dontrun{
 # Create a rectangle
 my_rectangle <- rectangle(height = 2, width = 4)
 
 # Calculate the perimeter of the rectangle
 perimeter.rectangle(my_rectangle)
-
+}
 }
 \seealso{
 \code{\link{perimeter}}

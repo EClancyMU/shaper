@@ -27,14 +27,19 @@ it raises an error indicating that the input must be an object of class
  appropriate method based on the type of shape.
 }
 \examples{
+\dontrun{
 # Create a rectangle
 my_rectangle <- rectangle(height = 4, width = 6)
+
+#draw the rectangle
+draw(my_rectangle)
 
 # Create a sphere
 my_sphere <- sphere(radius = 2)
 
 # Draw the sphere
 draw(my_sphere)
+}
 
 }
 \seealso{

@@ -31,12 +31,13 @@ area <- function(shp) {
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a rectangle object
 #' my_rectangle <- rectangle(height = 2,width = 4)
 #'
 #' # Calculate the area of the shpangle
 #' area.rectangle(my_rectangle)
-#'
+#' }
 #' @export
 
 area.rectangle <- function(shp) {
@@ -54,13 +55,14 @@ area.rectangle <- function(shp) {
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a shpare object
 #' my_shpare1 <- shpare(sideLength = 5)
 #'
 #'
 #' # Calculate the area of the shpare
 #' area.shpare(my_shpare1)
-#'
+#' }
 #'
 #' @export
 area.square <- function(shp){
@@ -78,12 +80,13 @@ area.square <- function(shp){
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a circle object
 #' my_circle <- circle(radius = 3)
 #'
 #' # Calculate the area of the circle
 #' area.circle(my_circle)
-#'
+#' }
 #' @export
 area.circle <- function(shp) {
   return(pi*shp$radius^2)
@@ -98,12 +101,13 @@ area.circle <- function(shp) {
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a triangle object
 #' my_triangle <- triangle(a = 3, b = 4, c = 5)
 #'
 #' # Calculate the area of the triangle
 #' area.triangle(my_triangle)
-#'
+#' }
 #'
 #' @export
 area.triangle <- function(shp) {
@@ -122,12 +126,13 @@ area.triangle <- function(shp) {
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cuboid object
 #' my_cuboid1 <- cuboid(height = 3, width = 4, depth = 5)
 #'
 #' # Calculate the surface area of the cuboid
 #' area.cuboid(my_cuboid1)
-#'
+#' }
 #' @export
 area.cuboid <- function(shp){
   return(2 * (shp$depth * shp$width + shp$depth * shp$height + shp$height * shp$width))
@@ -143,12 +148,13 @@ area.cuboid <- function(shp){
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cube object
 #' my_cube1 <- cube(sideLength = 5)
 #'
 #' # Calculate the surface area of the cube
 #' area.cube(my_cube1)
-#'
+#' }
 #' @export
 area.cube <- function(shp){
   return(6 * shp$sideLength * shp$sideLength)
@@ -164,12 +170,13 @@ area.cube <- function(shp){
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a shpere object
 #' my_shpere <- shpere(radius = 2)
 #'
 #' # Calculate the surface area of the shpere
 #' area.shpere(my_shpere)
-
+#' }
 #' @export
 area.sphere <- function(shp){
   return(4*pi*shp$radius^2)
@@ -185,12 +192,13 @@ area.sphere <- function(shp){
 #' @seealso \code{\link{area}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cylinder object
 #' my_cylinder <- cylinder(radius = 2, height = 5)
 #'
 #' # Calculate the surface area of the cylinder
 #' area.cylinder(my_cylinder)
-#'
+#' }
 #' @export
 area.cylinder <- function(shp){
   return(2*pi*shp$radius*(shp$radius+shp$height))

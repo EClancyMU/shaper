@@ -16,12 +16,13 @@ The surface area of the cuboid.
 Calculate the surface area of a cuboid.
 }
 \examples{
+\dontrun{
 # Create a cuboid object
 my_cuboid1 <- cuboid(height = 3, width = 4, depth = 5)
 
 # Calculate the surface area of the cuboid
 area.cuboid(my_cuboid1)
-
+}
 }
 \seealso{
 \code{\link{area}}

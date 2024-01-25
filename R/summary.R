@@ -30,11 +30,12 @@ summary <- function(shp){
 #' @family summary functions
 #'
 #' @examples
+#' \dontrun{
 #' my_square <- square(sideLength = 5)
 #'
 #' # Generate a summary for the square
 #' summary.2dShape(my_square)
-#'
+#' }
 #' @export
 summary.2dShape <- function(shp){
   cat("Shape:", class(shp)[3], "\nPerimeter:", perimeter(shp), "\nArea:", area(shp))
@@ -49,12 +50,13 @@ summary.2dShape <- function(shp){
 #' @family summary functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cylinder
 #' my_cylinder1 <- cylinder(radius = 2, height = 5)
 #'
 #' # Generate a summary for the cylinder
 #' summary.3dShape(my_cylinder1)
-#'
+#' }
 #' @export
 summary.3dShape <- function(shp){
   cat("Shape:", class(shp)[3], "\nSurface-area:", area(shp), "\nVolume:", volume(shp))

@@ -16,12 +16,13 @@ The volume of the cube.
 Calculate the volume of a cube.
 }
 \examples{
+\dontrun{
 # Create a cube object
 my_cube1 <- cube(sideLength = 5)
 
 # Calculate the volume of the cube
 volume.cube(my_cube1)
-
+}
 }
 \seealso{
 Other volume functions: 

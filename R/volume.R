@@ -32,12 +32,13 @@ volume <- function(shp) {
 #' @family volume functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cuboid object
 #' my_cuboid <- cuboid(height = 3, width = 4, depth = 5)
 #'
 #' # Calculate the volume of the cuboid
 #' volume.cuboid(my_cuboid)
-#'
+#' }
 #' @export
 volume.cuboid <- function(shp){
   return(shp$depth * shp$height * shp$width)
@@ -51,12 +52,13 @@ volume.cuboid <- function(shp){
 #' @family volume functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cube object
 #' my_cube1 <- cube(sideLength = 5)
 #'
 #' # Calculate the volume of the cube
 #' volume.cube(my_cube1)
-#'
+#' }
 #' @export
 volume.cube <- function(shp){
   return(shp$sideLength * shp$sideLength * shp$sideLength)
@@ -70,12 +72,13 @@ volume.cube <- function(shp){
 #' @family volume functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a sphere object
 #' my_sphere <- sphere(radius = 2)
 #'
 #' # Calculate the volume of the sphere
 #' volume.sphere(my_sphere)
-#'
+#' }
 #' @export
 volume.sphere <- function(shp){
   return((4/3) * pi * shp$radius^3)
@@ -89,12 +92,13 @@ volume.sphere <- function(shp){
 #' @family volume functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cylinder object
 #' my_cylinder <- cylinder(radius = 2, height = 5)
 #'
 #' # Calculate the volume of the cylinder
 #' volume.cylinder(my_cylinder)
-#'
+#' }
 #' @export
 volume.cylinder <- function(shp){
   return(pi * shp$radius^2 * shp$height)

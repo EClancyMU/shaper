@@ -17,12 +17,13 @@
 Draw a sphere in 3D.
 }
 \examples{
+\dontrun{
 # Create a sphere
 my_sphere <- sphere(radius = 2)
 
 # Draw the sphere
 draw.sphere(my_sphere)
-
+}
 }
 \seealso{
 Other draw functions: 

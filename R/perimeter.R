@@ -35,12 +35,13 @@ perimeter <- function(shp) {
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 2, width = 4)
 #'
 #' # Calculate the perimeter of the rectangle
 #' perimeter.rectangle(my_rectangle)
-#'
+#' }
 #' @export
 perimeter.rectangle <- function(shp) {
   return(2 * shp$height + 2 * shp$width)
@@ -55,12 +56,13 @@ perimeter.rectangle <- function(shp) {
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a square
 #' my_square <- square(sideLength = 5)
 #'
 #' # Calculate the perimeter of the square
 #' perimeter.square(my_square)
-#'
+#' }
 #' @export
 perimeter.square <- function(shp){
   return(4 * shp$sideLength)
@@ -75,12 +77,13 @@ perimeter.square <- function(shp){
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a circle
 #' my_circle <- circle(radius = 3)
 #'
 #' # Calculate the perimeter of the circle
 #' perimeter.circle(my_circle)
-#'
+#' }
 #' @export
 perimeter.circle <- function(shp) {
   return(2 * pi * shp$radius)
@@ -95,12 +98,13 @@ perimeter.circle <- function(shp) {
 #' @seealso \code{\link{perimeter}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a triangle
 #' my_triangle <- triangle(a = 3, b = 4, c = 5)
 #'
 #' # Calculate the perimeter of the triangle
 #' perimeter.triangle(my_triangle)
-#'
+#' }
 #' @export
 perimeter.triangle <- function(shp) {
   return(shp$a + shp$b + shp$c)

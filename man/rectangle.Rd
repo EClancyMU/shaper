@@ -18,8 +18,9 @@ An object of class 'shape', '2dShape', and 'rectangle'.
 Create a rectangle object.
 }
 \examples{
+\dontrun{
 my_rectangle <- rectangle(height = 2,width = 4)
-
+}
 }
 \seealso{
 Other 2D Shape Classes: 

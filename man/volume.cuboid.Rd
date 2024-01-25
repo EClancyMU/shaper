@@ -17,12 +17,13 @@ The volume of the cuboid.
 Calculate the volume of a cuboid.
 }
 \examples{
+\dontrun{
 # Create a cuboid object
 my_cuboid <- cuboid(height = 3, width = 4, depth = 5)
 
 # Calculate the volume of the cuboid
 volume.cuboid(my_cuboid)
-
+}
 }
 \seealso{
 Other volume functions: 

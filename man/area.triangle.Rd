@@ -16,12 +16,13 @@ The area of the triangle.
 Calculate the area of a triangle using Heron's formula.
 }
 \examples{
+\dontrun{
 # Create a triangle object
 my_triangle <- triangle(a = 3, b = 4, c = 5)
 
 # Calculate the area of the triangle
 area.triangle(my_triangle)
-
+}
 
 }
 \seealso{

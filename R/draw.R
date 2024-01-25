@@ -20,14 +20,19 @@
 #' @family draw functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 4, width = 6)
+#'
+#' #draw the rectangle
+#' draw(my_rectangle)
 #'
 #' # Create a sphere
 #' my_sphere <- sphere(radius = 2)
 #'
 #' # Draw the sphere
 #' draw(my_sphere)
+#' }
 #'
 #'@export
 draw <- function(shape, color = "blue", fillColor = "transparent") {
@@ -51,12 +56,13 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #' @seealso \code{\link{draw}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a rectangle
 #' my_rectangle <- rectangle(height = 4, width = 6)
 #'
 #' # Draw the rectangle
 #' draw.rectangle(my_rectangle)
-#'
+#' }
 #' @export
 draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
   x <- y <- NULL  # Dummy definitions
@@ -90,12 +96,13 @@ draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
 #' @seealso \code{\link{draw}}
 #'
 #' @examples
+#' \dontrun{
 #' # Create a square
 #' my_square <- square(sideLength = 5)
 #'
 #' # Draw the square
 #' draw.square(my_square)
-#'
+#' }
 #' @export
 draw.square <- function(shape, color = "blue", fillColor = "transparent") {
   x <- y <- NULL  # Dummy definitions
@@ -125,12 +132,13 @@ draw.square <- function(shape, color = "blue", fillColor = "transparent") {
 #' @family draw functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a triangle
 #' my_triangle <- triangle(a = 3, b = 4, c = 5)
 #'
 #' # Draw the triangle
 #' draw.triangle(my_triangle)
-#'
+#' }
 #' @export
 draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
   x <- y <- NULL  # Dummy definitions
@@ -163,12 +171,13 @@ draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
 #' @family draw functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a circle
 #' my_circle <- circle(radius = 3)
 #'
 #' # Draw the circle
 #' draw.circle(my_circle)
-#'
+#' }
 #' @export
 draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
   x <- y <- NULL  # Dummy definitions
@@ -199,12 +208,13 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #' @family draw functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a sphere
 #' my_sphere <- sphere(radius = 2)
 #'
 #' # Draw the sphere
 #' draw.sphere(my_sphere)
-#'
+#' }
 #' @export
 draw.sphere <- function(shape, color =  "#FF0000",...) {
 
@@ -226,12 +236,13 @@ draw.sphere <- function(shape, color =  "#FF0000",...) {
 #'
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cube
 #' my_cuboid <- cuboid(height = 3, width = 3, depth = 3)
 #'
 #' # Draw the cube
 #' draw.cuboid(my_cuboid)
-#'
+#' }
 #' @export
 draw.cuboid <- function(shape, color =  "red", ...) {
   height <- shape$height
@@ -284,12 +295,13 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #'
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cube
 #' my_cube <- cube(sideLength = 5)
 #'
 #' # Draw the cube
 #' draw.cube(my_cube)
-#'
+#' }
 #' @export
 draw.cube <- function(shape, color = "red", ...) {
   sideLength <- shape$sideLength
@@ -338,12 +350,13 @@ draw.cube <- function(shape, color = "red", ...) {
 #' @family draw functions
 #'
 #' @examples
+#' \dontrun{
 #' # Create a cylinder
 #' my_cylinder <- cylinder(radius = 2, height = 5)
 #'
 #' # Draw the cylinder
 #' draw.cylinder(my_cylinder)
-#'
+#' }
 #' @export
 draw.cylinder <- function(shape, color = "red", ...){
   center <- matrix(c(0, 0, 0, 0, 0, shape$height), ncol = 3, byrow = TRUE)

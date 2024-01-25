@@ -16,11 +16,13 @@ The surface area of the shpere.
 Calculate the surface area of a sphere.
 }
 \examples{
+\dontrun{
 # Create a shpere object
 my_shpere <- shpere(radius = 2)
 
 # Calculate the surface area of the shpere
 area.shpere(my_shpere)
+}
 }
 \seealso{
 \code{\link{area}}

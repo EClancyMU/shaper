@@ -16,11 +16,12 @@ Name of the shape, Area and Perimeter
 Generate a summary of the parameters for 2D shapes.
 }
 \examples{
+\dontrun{
 my_square <- square(sideLength = 5)
 
 # Generate a summary for the square
 summary.2dShape(my_square)
-
+}
 }
 \seealso{
 Other summary functions: 

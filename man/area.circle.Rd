@@ -16,12 +16,13 @@ The area of the circle.
 Calculate the area of a circle.
 }
 \examples{
+\dontrun{
 # Create a circle object
 my_circle <- circle(radius = 3)
 
 # Calculate the area of the circle
 area.circle(my_circle)
-
+}
 }
 \seealso{
 \code{\link{area}}

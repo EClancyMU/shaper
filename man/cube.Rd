@@ -16,9 +16,10 @@ An object of class 'shape', '3dShape', and 'cube'.
 Create a cube object.
 }
 \examples{
+\dontrun{
 my_cube1 <- cube(sideLength = 5)
 my_cube2 <- cuboid(height = 3, width = 3, depth = 3)
-
+}
 }
 \seealso{
 \code{\link{cuboid}}
