@@ -57,7 +57,7 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the rectangle
 #' draw.rectangle(my_rectangle)
 #'
-#' @export
+#' @S3method draw rectangle
 draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
   rectangle_data <- data.frame(
     x = c(0, shape$width, shape$width, 0),
@@ -94,7 +94,7 @@ draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the square
 #' draw.square(my_square)
 #'
-#' @export
+#' @S3method draw square
 draw.square <- function(shape, color = "blue", fillColor = "transparent") {
   square_data <- data.frame(
     x = c(0, shape$sideLength, shape$sideLength, 0),
@@ -127,7 +127,7 @@ draw.square <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the triangle
 #' draw.triangle(my_triangle)
 #'
-#' @export
+#' @S3method draw triangle
 draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
   triangle_data <- data.frame(
     x = c(0, shape$a, shape$b),
@@ -163,7 +163,7 @@ draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the circle
 #' draw.circle(my_circle)
 #'
-#' @export
+#' @S3method draw circle
 draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
   circle_data <- data.frame(
     x = shape$radius * cos(seq(0, 2 * pi, length.out = 100)),
@@ -196,7 +196,7 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the sphere
 #' draw.sphere(my_sphere)
 #'
-#' @export
+#' @S3method draw sphere
 draw.sphere <- function(sph, color =  "#FF0000",...) {
   open3d()
 
@@ -223,7 +223,7 @@ draw.sphere <- function(sph, color =  "#FF0000",...) {
 #' # Draw the cube
 #' draw.cuboid(my_cuboid)
 #'
-#' @export
+#' @S3method draw cuboid
 draw.cuboid <- function(shape, color =  "red", ...) {
   height <- shape$height
   width <- shape$width
@@ -280,7 +280,7 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #' # Draw the cube
 #' draw.cube(my_cube)
 #'
-#' @export
+#' @S3method draw cube
 draw.cube <- function(shape, color = "red", ...) {
   sideLength <- shape$sideLength
 
@@ -335,7 +335,7 @@ draw.cube <- function(shape, color = "red", ...) {
 #' # Draw the cylinder
 #' draw.cylinder(my_cylinder)
 #'
-#' @export
+#' @S3method draw cylinder
 draw.cylinder <- function(shape, color = "red", ...){
   center <- matrix(c(0, 0, 0, 0, 0, shape$height), ncol = 3, byrow = TRUE)
   radius <- shape$radius

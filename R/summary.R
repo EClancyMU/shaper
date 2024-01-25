@@ -35,7 +35,7 @@ summary <- function(shp){
 #' summary.2dShape(my_square)
 #'
 #'
-#' @export
+#' @S3method summary 2dShape
 summary.2dShape <- function(shp){
   cat("Shape:", class(shp)[3], "\nPerimeter:", perimeter(shp), "\nArea:", area(shp))
 }
@@ -53,7 +53,7 @@ summary.2dShape <- function(shp){
 #' # Generate a summary for the cylinder
 #' summary.3dShape(my_cylinder1)
 #'
-#' @export
+#' @S3method summary 3dShape
 summary.3dShape <- function(shp){
   cat("Shape:", class(shp)[3], "\nSurface-area:", area(shp), "\nVolume:", volume(shp))
 }

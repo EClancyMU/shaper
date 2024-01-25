@@ -37,8 +37,7 @@ area <- function(shp) {
 #' # Calculate the area of the shpangle
 #' area.rectangle(my_rectangle)
 #'
-#' @export
-
+#' @S3method area rectangle
 area.rectangle <- function(shp) {
   return(shp$height * shp$width)
 }
@@ -62,7 +61,7 @@ area.rectangle <- function(shp) {
 #' area.shpare(my_shpare1)
 #'
 #'
-#' @export
+#' @S3method area square
 area.square <- function(shp){
   return(shp$sideLength * shp$sideLength)
 }
@@ -84,7 +83,7 @@ area.square <- function(shp){
 #' # Calculate the area of the circle
 #' area.circle(my_circle)
 #'
-#' @export
+#' @S3method area circle
 area.circle <- function(shp) {
   return(pi*shp$radius^2)
 }
@@ -105,7 +104,7 @@ area.circle <- function(shp) {
 #' area.triangle(my_triangle)
 #'
 #'
-#' @export
+#' @S3method area triangle
 area.triangle <- function(shp) {
   s <- perimeter(shp)/2
   Area <- sqrt(s*(s-shp$a)*(s-shp$b)*(s-shp$c)) #Heron's formula
@@ -128,7 +127,7 @@ area.triangle <- function(shp) {
 #' # Calculate the surface area of the cuboid
 #' area.cuboid(my_cuboid1)
 #'
-#' @export
+#' @S3method area cuboid
 area.cuboid <- function(shp){
   return(2 * (shp$depth * shp$width + shp$depth * shp$height + shp$height * shp$width))
 }
@@ -149,7 +148,7 @@ area.cuboid <- function(shp){
 #' # Calculate the surface area of the cube
 #' area.cube(my_cube1)
 #'
-#' @export
+#' @S3method area cube
 area.cube <- function(shp){
   return(6 * shp$sideLength * shp$sideLength)
 }
@@ -170,7 +169,7 @@ area.cube <- function(shp){
 #' # Calculate the surface area of the shpere
 #' area.shpere(my_shpere)
 
-#' @export
+#' @S3method area sphere
 area.sphere <- function(shp){
   return(4*pi*shp$radius^2)
 }
@@ -191,7 +190,7 @@ area.sphere <- function(shp){
 #' # Calculate the surface area of the cylinder
 #' area.cylinder(my_cylinder)
 #'
-#' @export
+#' @S3method area cylinder
 area.cylinder <- function(shp){
   return(2*pi*shp$radius*(shp$radius+shp$height))
 }
