@@ -236,7 +236,7 @@ draw.sphere <- function(shape, color =  "#FF0000",...) {
 #' # Draw the cube
 #' draw.cuboid(my_cuboid)
 #'
-#' @export draw cuboid
+#' @export
 draw.cuboid <- function(shape, color =  "red", ...) {
   height <- shape$height
   width <- shape$width
