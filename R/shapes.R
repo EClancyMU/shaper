@@ -21,7 +21,7 @@ is.numeric.value <- function(x) {
 #'
 #' @export
 rectangle <- function(height, width) {
-  if(!is.numeric.value(height) || !is.numeric.value(width)) {
+  if(!is.numeric.value(height) | !is.numeric.value(width)) {
     stop("Height and width must be numeric values.")
   }
   rect <- list(height = height, width = width)
