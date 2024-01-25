@@ -183,6 +183,7 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' @param shape An object of class 'shape' representing a sphere.
 #' @param color The color of the sphere (default is "#FF0000 or 'red').
+#' @param ... Additional arguments passed to `sphere3d` and other underlying functions.
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
 #'
@@ -196,11 +197,7 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #' draw.sphere(my_sphere)
 #'
 #' @export
-<<<<<<< HEAD
 draw.sphere <- function(sph, color =  "#FF0000",...) {
-=======
-draw.sphere <- function(shape, color =  "#FF0000", ...) {
->>>>>>> 3b60bc8012ea4b7a360b232ddc09d6784403f4f8
   open3d()
 
   sphere3d(0, 0, 0, radius = shape$radius, color = color, alpha = 0.7)
@@ -212,6 +209,7 @@ draw.sphere <- function(shape, color =  "#FF0000", ...) {
 #'
 #' @param shape An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
+#' @param ... Additional arguments passed to underlying rgl functions.
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
 #'
@@ -268,6 +266,7 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #'
 #' @param shape An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
+#' @param ... Additional arguments passed to underlying rgl functions.
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
 #'
@@ -321,7 +320,9 @@ draw.cube <- function(shape, color = "red", ...) {
 #'
 #' @param shape An object of class 'shape' representing a cylinder.
 #' @param color The color of the cylinder (default is "red").
-#'
+#' @param ... Additional arguments passed to `cylinder3d` and
+#' other underlying functions.
+#' @export
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "qmesh3d"
 #' "shade3d" "mesh3d" "wire3d"
 #'

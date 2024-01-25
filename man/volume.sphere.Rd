@@ -4,10 +4,10 @@
 \alias{volume.sphere}
 \title{Calculate the volume of a sphere.}
 \usage{
-\method{volume}{sphere}(sph)
+\method{volume}{sphere}(shp)
 }
 \arguments{
-\item{sph}{An object of class '3dShape' representing a sphere with radius.}
+\item{shp}{An object of class '3dShape' representing a sphere with radius.}
 }
 \value{
 The volume of the sphere.

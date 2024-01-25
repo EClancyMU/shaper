@@ -4,10 +4,10 @@
 \alias{volume.cuboid}
 \title{Calculate the volume of a cuboid.}
 \usage{
-\method{volume}{cuboid}(cu)
+\method{volume}{cuboid}(shp)
 }
 \arguments{
-\item{cu}{An object of class '3dShape' representing a cuboid with dimensions
+\item{shp}{An object of class '3dShape' representing a cuboid with dimensions
 height, width, and depth.}
 }
 \value{

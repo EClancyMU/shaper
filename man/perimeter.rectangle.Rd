@@ -4,10 +4,10 @@
 \alias{perimeter.rectangle}
 \title{Calculate the perimeter of a rectangle.}
 \usage{
-\method{perimeter}{rectangle}(rect)
+\method{perimeter}{rectangle}(shp)
 }
 \arguments{
-\item{rect}{An object of class '2dShape' representing a rectangle.}
+\item{shp}{An object of class '2dShape' representing a rectangle.}
 }
 \value{
 The perimeter of the rectangle.
