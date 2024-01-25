@@ -41,7 +41,7 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 
 #' Draw a rectangle in 2D.
 #'
-#' @param rec An object of class 'shape' representing a rectangle.
+#' @param shape An object of class 'shape' representing a rectangle.
 #' @param color The border color of the rectangle (default is "blue").
 #' @param fillColor The fill color of the rectangle (default is "transparent").
 #' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
@@ -58,7 +58,7 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #' draw.rectangle(my_rectangle)
 #'
 #' @export
-draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
+draw.rectangle <- function(shape, color = "blue", fillColor = "transparent") {
   rectangle_data <- data.frame(
     x = c(0, rec$width, rec$width, 0),
     y = c(0, 0, rec$height, rec$height)
@@ -79,7 +79,7 @@ draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
 
 #' Draw a square in 2D.
 #'
-#' @param squ An object of class 'shape' representing a square.
+#' @param shape An object of class 'shape' representing a square.
 #' @param color The border color of the square (default is "blue").
 #' @param fillColor The fill color of the square (default is "transparent").
 #' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
@@ -95,7 +95,7 @@ draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
 #' draw.square(my_square)
 #'
 #' @export
-draw.square <- function(squ, color = "blue", fillColor = "transparent") {
+draw.square <- function(shape, color = "blue", fillColor = "transparent") {
   square_data <- data.frame(
     x = c(0, squ$sideLength, squ$sideLength, 0),
     y = c(0, 0, squ$sideLength, squ$sideLength)
@@ -113,7 +113,7 @@ draw.square <- function(squ, color = "blue", fillColor = "transparent") {
 
 #' Draw a triangle in 2D.
 #'
-#' @param triangle An object of class 'shape' representing a triangle.
+#' @param shape An object of class 'shape' representing a triangle.
 #' @param color The border color of the triangle (default is "blue").
 #' @param fillColor The fill color of the triangle (default is "transparent").
 #' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
@@ -128,7 +128,7 @@ draw.square <- function(squ, color = "blue", fillColor = "transparent") {
 #' draw.triangle(my_triangle)
 #'
 #' @export
-draw.triangle <- function(triangle, color = "blue", fillColor = "transparent") {
+draw.triangle <- function(shape, color = "blue", fillColor = "transparent") {
   triangle_data <- data.frame(
     x = c(0, triangle$a, triangle$b),
     y = c(0, 0, triangle$c)
@@ -148,7 +148,7 @@ draw.triangle <- function(triangle, color = "blue", fillColor = "transparent") {
 
 #' Draw a circle in 2D.
 #'
-#' @param circle An object of class 'shape' representing a circle.
+#' @param shape An object of class 'shape' representing a circle.
 #' @param color The border color of the circle (default is "blue").
 #' @param fillColor The fill color of the circle (default is "transparent").
 #' @importFrom ggplot2 "ggplot" "geom_polygon" "labs" "theme_minimal"
@@ -164,7 +164,7 @@ draw.triangle <- function(triangle, color = "blue", fillColor = "transparent") {
 #' draw.circle(my_circle)
 #'
 #' @export
-draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
+draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
   circle_data <- data.frame(
     x = circle$radius * cos(seq(0, 2 * pi, length.out = 100)),
     y = circle$radius * sin(seq(0, 2 * pi, length.out = 100))
@@ -181,7 +181,7 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 
 #' Draw a sphere in 3D.
 #'
-#' @param sph An object of class 'shape' representing a sphere.
+#' @param shape An object of class 'shape' representing a sphere.
 #' @param color The color of the sphere (default is "#FF0000 or 'red').
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
@@ -196,7 +196,7 @@ draw.circle <- function(circle, color = "blue", fillColor = "transparent") {
 #' draw.sphere(my_sphere)
 #'
 #' @export
-draw.sphere <- function(sph, color =  "#FF0000",..) {
+draw.sphere <- function(shape, color =  "#FF0000",..) {
   open3d()
 
   sphere3d(0, 0, 0, radius = sph$radius, color = color, alpha = 0.7)
@@ -206,7 +206,7 @@ draw.sphere <- function(sph, color =  "#FF0000",..) {
 
 #' Draw a cuboid in 3D using rgl.
 #'
-#' @param cub An object of class 'shape' representing a cube.
+#' @param shape An object of class 'shape' representing a cube.
 #' @param color The color of the cube (default is "red").
 #' @importFrom rgl "open3d" "spheres3d" "decorate3d" "cylinder3d" "mesh3d" "qmesh3d"
 #' "shade3d" "wire3d"
@@ -222,7 +222,7 @@ draw.sphere <- function(sph, color =  "#FF0000",..) {
 #' draw.cuboid(my_cuboid)
 #'
 #' @export
-draw.cuboid <- function(cub, color =  "red", ...) {
+draw.cuboid <- function(shape, color =  "red", ...) {
   height <- cub$height
   width <- cub$width
   depth <- cub$depth
@@ -278,7 +278,7 @@ draw.cuboid <- function(cub, color =  "red", ...) {
 #' draw.cube(my_cube)
 #'
 #' @export
-draw.cube <- function(cube, color = "red", ...) {
+draw.cube <- function(shape, color = "red", ...) {
   sideLength <- cube$sideLength
 
   vertices <- cbind(
@@ -331,7 +331,7 @@ draw.cube <- function(cube, color = "red", ...) {
 #' draw.cylinder(my_cylinder)
 #'
 #' @export
-draw.cylinder <- function(cyl, color = "red", ..){
+draw.cylinder <- function(shape, color = "red", ..){
   center <- matrix(c(0, 0, 0, 0, 0, cyl$height), ncol = 3, byrow = TRUE)
   radius <- cyl$radius
   cylinder_mesh <- cylinder3d(center = center, radius = radius, sides = 1000,closed=-2)
