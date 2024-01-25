@@ -39,7 +39,7 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
   }
 }
 
-#' Draw a rectangle in 2d hmm.
+#' Draw a rectangle in 2d.
 #'
 #' @param rec An object of class 'shape' representing a rectangle.
 #' @param color The border color of the rectangle (default is "blue").
