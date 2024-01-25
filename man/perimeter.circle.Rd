@@ -4,10 +4,10 @@
 \alias{perimeter.circle}
 \title{Calculate the perimeter of a circle.}
 \usage{
-\method{perimeter}{circle}(circ)
+\method{perimeter}{circle}(shp)
 }
 \arguments{
-\item{circ}{An object of class '2dShape' representing a circle.}
+\item{shp}{An object of class '2dShape' representing a circle.}
 }
 \value{
 The perimeter of the circle.

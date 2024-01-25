@@ -4,10 +4,10 @@
 \alias{draw.circle}
 \title{Draw a circle in 2D.}
 \usage{
-\method{draw}{circle}(circle, color = "blue", fillColor = "transparent")
+\method{draw}{circle}(shape, color = "blue", fillColor = "transparent")
 }
 \arguments{
-\item{circle}{An object of class 'shape' representing a circle.}
+\item{shape}{An object of class 'shape' representing a circle.}
 
 \item{color}{The border color of the circle (default is "blue").}
 

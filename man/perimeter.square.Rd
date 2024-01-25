@@ -4,10 +4,10 @@
 \alias{perimeter.square}
 \title{Calculate the perimeter of a square.}
 \usage{
-\method{perimeter}{square}(squ)
+\method{perimeter}{square}(shp)
 }
 \arguments{
-\item{squ}{An object of class '2dShape' representing a square.}
+\item{shp}{An object of class '2dShape' representing a square.}
 }
 \value{
 The perimeter of the square.

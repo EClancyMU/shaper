@@ -4,10 +4,10 @@
 \alias{draw.cylinder}
 \title{Draw a cylinder in 3D.}
 \usage{
-\method{draw}{cylinder}(cyl, color = "red", ..)
+\method{draw}{cylinder}(shape, color = "red", ...)
 }
 \arguments{
-\item{cyl}{An object of class 'shape' representing a cylinder.}
+\item{shape}{An object of class 'shape' representing a cylinder.}
 
 \item{color}{The color of the cylinder (default is "red").}
 }

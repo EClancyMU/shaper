@@ -4,10 +4,10 @@
 \alias{draw.triangle}
 \title{Draw a triangle in 2D.}
 \usage{
-\method{draw}{triangle}(triangle, color = "blue", fillColor = "transparent")
+\method{draw}{triangle}(shape, color = "blue", fillColor = "transparent")
 }
 \arguments{
-\item{triangle}{An object of class 'shape' representing a triangle.}
+\item{shape}{An object of class 'shape' representing a triangle.}
 
 \item{color}{The border color of the triangle (default is "blue").}
 

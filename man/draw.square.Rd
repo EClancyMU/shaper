@@ -4,10 +4,10 @@
 \alias{draw.square}
 \title{Draw a square in 2D.}
 \usage{
-\method{draw}{square}(squ, color = "blue", fillColor = "transparent")
+\method{draw}{square}(shape, color = "blue", fillColor = "transparent")
 }
 \arguments{
-\item{squ}{An object of class 'shape' representing a square.}
+\item{shape}{An object of class 'shape' representing a square.}
 
 \item{color}{The border color of the square (default is "blue").}
 

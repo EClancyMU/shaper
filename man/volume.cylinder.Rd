@@ -4,10 +4,10 @@
 \alias{volume.cylinder}
 \title{Calculate the volume of a cylinder.}
 \usage{
-\method{volume}{cylinder}(cyl)
+\method{volume}{cylinder}(shp)
 }
 \arguments{
-\item{cyl}{An object of class '3dShape' representing a cylinder with radius and height.}
+\item{shp}{An object of class '3dShape' representing a cylinder with radius and height.}
 }
 \value{
 The volume of the cylinder.

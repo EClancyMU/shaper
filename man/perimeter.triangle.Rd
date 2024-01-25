@@ -4,10 +4,10 @@
 \alias{perimeter.triangle}
 \title{Calculate the perimeter of a triangle.}
 \usage{
-\method{perimeter}{triangle}(tri)
+\method{perimeter}{triangle}(shp)
 }
 \arguments{
-\item{tri}{An object of class '2dShape' representing a triangle.}
+\item{shp}{An object of class '2dShape' representing a triangle.}
 }
 \value{
 The perimeter of the triangle.

@@ -4,10 +4,10 @@
 \alias{draw.sphere}
 \title{Draw a sphere in 3D.}
 \usage{
-\method{draw}{sphere}(sph, color = "#FF0000", ..)
+\method{draw}{sphere}(shape, color = "#FF0000", ...)
 }
 \arguments{
-\item{sph}{An object of class 'shape' representing a sphere.}
+\item{shape}{An object of class 'shape' representing a sphere.}
 
 \item{color}{The color of the sphere (default is "#FF0000 or 'red').}
 }

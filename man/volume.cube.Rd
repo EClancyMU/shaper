@@ -4,10 +4,10 @@
 \alias{volume.cube}
 \title{Calculate the volume of a cube.}
 \usage{
-\method{volume}{cube}(cub)
+\method{volume}{cube}(shp)
 }
 \arguments{
-\item{cub}{An object of class '3dShape' representing a cube with side length.}
+\item{shp}{An object of class '3dShape' representing a cube with side length.}
 }
 \value{
 The volume of the cube.
