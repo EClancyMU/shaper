@@ -4,10 +4,10 @@
 \alias{area.circle}
 \title{Calculate the area of a circle.}
 \usage{
-\method{area}{circle}(circ)
+\method{area}{circle}(shp)
 }
 \arguments{
-\item{circ}{An object of class 'shape' representing a circle.}
+\item{shp}{An object of class 'shape' representing a circle.}
 }
 \value{
 The area of the circle.

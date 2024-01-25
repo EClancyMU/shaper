@@ -4,24 +4,24 @@
 \alias{area.square}
 \title{Calculate the area of a square.}
 \usage{
-\method{area}{square}(squ)
+\method{area}{square}(shp)
 }
 \arguments{
-\item{squ}{An object of class 'shape' representing a square.}
+\item{shp}{An object of class 'shape' representing a shpare.}
 }
 \value{
-The area of the square.
+The area of the shpare.
 }
 \description{
 Calculate the area of a square.
 }
 \examples{
-# Create a square object
-my_square1 <- square(sideLength = 5)
+# Create a shpare object
+my_shpare1 <- shpare(sideLength = 5)
 
 
-# Calculate the area of the square
-area.square(my_square1)
+# Calculate the area of the shpare
+area.shpare(my_shpare1)
 
 
 }

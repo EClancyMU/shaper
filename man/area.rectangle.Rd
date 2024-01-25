@@ -4,10 +4,10 @@
 \alias{area.rectangle}
 \title{Calculate the area of a rectangle.}
 \usage{
-\method{area}{rectangle}(rect)
+\method{area}{rectangle}(shp)
 }
 \arguments{
-\item{rect}{An object of class 'shape' representing a rectangle.}
+\item{shp}{An object of class 'shape' representing a rectangle.}
 }
 \value{
 The area of the rectangle.
@@ -19,7 +19,7 @@ Calculate the area of a rectangle.
 # Create a rectangle object
 my_rectangle <- rectangle(height = 2,width = 4)
 
-# Calculate the area of the rectangle
+# Calculate the area of the shpangle
 area.rectangle(my_rectangle)
 
 }

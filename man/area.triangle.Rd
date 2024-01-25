@@ -4,10 +4,10 @@
 \alias{area.triangle}
 \title{Calculate the area of a triangle using Heron's formula.}
 \usage{
-\method{area}{triangle}(tri)
+\method{area}{triangle}(shp)
 }
 \arguments{
-\item{tri}{An object of class 'shape' representing a triangle with sides a, b, and c.}
+\item{shp}{An object of class 'shape' representing a triangle with sides a, b, and c.}
 }
 \value{
 The area of the triangle.

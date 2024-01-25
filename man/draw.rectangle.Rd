@@ -4,10 +4,10 @@
 \alias{draw.rectangle}
 \title{Draw a rectangle in 2d.}
 \usage{
-\method{draw}{rectangle}(rec, color = "blue", fillColor = "transparent")
+\method{draw}{rectangle}(shape, color = "blue", fillColor = "transparent")
 }
 \arguments{
-\item{rec}{An object of class 'shape' representing a rectangle.}
+\item{shape}{An object of class 'shape' representing a rectangle.}
 
 \item{color}{The border color of the rectangle (default is "blue").}
 

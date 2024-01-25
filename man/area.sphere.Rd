@@ -4,23 +4,23 @@
 \alias{area.sphere}
 \title{Calculate the surface area of a sphere.}
 \usage{
-\method{area}{sphere}(sph)
+\method{area}{sphere}(shp)
 }
 \arguments{
-\item{sph}{An object of class 'shape' representing a sphere with radius.}
+\item{shp}{An object of class 'shape' representing a shpere with radius.}
 }
 \value{
-The surface area of the sphere.
+The surface area of the shpere.
 }
 \description{
 Calculate the surface area of a sphere.
 }
 \examples{
-# Create a sphere object
-my_sphere <- sphere(radius = 2)
+# Create a shpere object
+my_shpere <- shpere(radius = 2)
 
-# Calculate the surface area of the sphere
-area.sphere(my_sphere)
+# Calculate the surface area of the shpere
+area.shpere(my_shpere)
 }
 \seealso{
 \code{\link{area}}

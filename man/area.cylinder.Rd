@@ -4,10 +4,10 @@
 \alias{area.cylinder}
 \title{Calculate the surface area of a cylinder.}
 \usage{
-\method{area}{cylinder}(cyl)
+\method{area}{cylinder}(shp)
 }
 \arguments{
-\item{cyl}{An object of class 'shape' representing a cylinder with radius and height.}
+\item{shp}{An object of class 'shape' representing a cylinder with radius and height.}
 }
 \value{
 The surface area of the cylinder.
