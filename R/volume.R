@@ -38,7 +38,7 @@ volume <- function(shp) {
 #' # Calculate the volume of the cuboid
 #' volume.cuboid(my_cuboid)
 #'
-#' @S3method volume cuboid
+#' @exportS3Method volume cuboid
 volume.cuboid <- function(shp){
   return(shp$depth * shp$height * shp$width)
 }
@@ -57,7 +57,7 @@ volume.cuboid <- function(shp){
 #' # Calculate the volume of the cube
 #' volume.cube(my_cube1)
 #'
-#' @S3method volume cube
+#' @exportS3Method volume cube
 volume.cube <- function(shp){
   return(shp$sideLength * shp$sideLength * shp$sideLength)
 }
@@ -76,7 +76,7 @@ volume.cube <- function(shp){
 #' # Calculate the volume of the sphere
 #' volume.sphere(my_sphere)
 #'
-#' @S3method volume sphere
+#' @exportS3Method volume sphere
 volume.sphere <- function(shp){
   return((4/3) * pi * shp$radius^3)
 }
@@ -95,7 +95,7 @@ volume.sphere <- function(shp){
 #' # Calculate the volume of the cylinder
 #' volume.cylinder(my_cylinder)
 #'
-#' @S3method volume cylinder
+#' @exportS3Method volume cylinder
 volume.cylinder <- function(shp){
   return(pi * shp$radius^2 * shp$height)
 }
