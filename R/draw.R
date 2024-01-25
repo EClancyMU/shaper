@@ -207,6 +207,7 @@ draw.circle <- function(shape, color = "blue", fillColor = "transparent") {
 #' # Draw the sphere
 #' draw.sphere(my_sphere)
 #'
+
 #' @export
 draw.sphere <- function(shape, color =  "#FF0000",...) {
   open3d()
@@ -235,7 +236,7 @@ draw.sphere <- function(shape, color =  "#FF0000",...) {
 #' # Draw the cube
 #' draw.cuboid(my_cuboid)
 #'
-#' @export
+#' @export draw cuboid
 draw.cuboid <- function(shape, color =  "red", ...) {
   height <- shape$height
   width <- shape$width
@@ -293,7 +294,7 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #' # Draw the cube
 #' draw.cube(my_cube)
 #'
-#' @export
+#' @export draw cube
 draw.cube <- function(shape, color = "red", ...) {
   sideLength <- shape$sideLength
 
@@ -348,7 +349,7 @@ draw.cube <- function(shape, color = "red", ...) {
 #' # Draw the cylinder
 #' draw.cylinder(my_cylinder)
 #'
-#' @export
+#' @export draw cylinder
 draw.cylinder <- function(shape, color = "red", ...){
   center <- matrix(c(0, 0, 0, 0, 0, shape$height), ncol = 3, byrow = TRUE)
   radius <- shape$radius
