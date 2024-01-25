@@ -21,11 +21,11 @@ is.numeric.value <- function(x) {
 #'
 #' @export
 rectangle <- function(height, width) {
-  if(!is.numeric.value(height) || !is.numeric.value(width)) {
+  if(!is.numeric.value(height) | !is.numeric.value(width)) {
     stop("Height and width must be numeric values.")
   }
   rect <- list(height = height, width = width)
-  class(rect) <- c("rectangle","2dShape", "shape")
+  class(rect) <- c("shape","2dShape", "rectangle")
   return(rect)
 }
 
@@ -47,7 +47,7 @@ square <- function(sideLength){
     stop("Side Length must be a numeric value.")
   }
   squ <- rectangle(sideLength, sideLength)
-  class(squ) <- c("square","2dShape","shape")
+  class(squ) <- c("shape","2dShape","square")
   # Add 'sideLength' attribute for convenience in square-specific calculations
   squ$sideLength <- sideLength
   return(squ)
@@ -88,7 +88,7 @@ circle <- function(radius){
 #'
 #' @export
 triangle <- function(a, b, c) {
-  if(!is.numeric.value(a) || !is.numeric.value(b) || !is.numeric.value(c)) {
+  if(!is.numeric.value(a) | !is.numeric.value(b) | !is.numeric.value(c)) {
     stop("a, b and c must be numeric values.")
   }
   ##triangle inequality theorem
@@ -115,7 +115,7 @@ triangle <- function(a, b, c) {
 #'
 #' @export
 cuboid <- function(height, width, depth) {
-  if(!is.numeric.value(height) || !is.numeric.value(width) || !is.numeric.value(depth)) {
+  if(!is.numeric.value(height) | !is.numeric.value(width) | !is.numeric.value(depth)) {
     stop("Height, width and depth must be numeric values.")
   }
   cu <- list(width = width, depth = depth, height = height)
@@ -181,7 +181,7 @@ sphere <- function(radius){
 #'
 #' @export
 cylinder <- function(radius, height){
-  if(!is.numeric.value(radius) || !is.numeric.value(height)) {
+  if(!is.numeric.value(radius) | !is.numeric.value(height)) {
     stop("Radius and height must be numeric values.")
   }
   cyl <- list(radius = radius, height = height)

@@ -6,15 +6,15 @@
 #' and 3D shapes such as cuboids, cubes, spheres, and cylinders.
 #'
 #' @param shape An object of class 'shape'.
-#' @param color The border color of the shape (default is "blue" but can be easily
-#' changed.).
-#' @param fillColor The fill color of the shape (default is "transparent" but can be
-#' easily changed).
+#' @param color The border color of the shape (default is "blue" for 2D shapes
+#' and "red" for 3d shapes but can be easily changed.).
+#' @param fillColor The fill color of the shape (default is "transparent" but
+#' can be easily changed).
 #'
 #' @details The function checks if the input object is of class 'shape'. If not,
-#' it raises an error indicating that the input must be an object of class 'shape'.
-#' If the input is of class 'shape', it dispatches the drawing to the appropriate
-#' method based on the type of shape.
+#' it raises an error indicating that the input must be an object of class
+#' 'shape'.If the input is of class 'shape', it dispatches the drawing to the
+#'  appropriate method based on the type of shape.
 #'
 #'
 #' @family draw functions
@@ -56,6 +56,8 @@ draw <- function(shape, color = "blue", fillColor = "transparent") {
 #'
 #' # Draw the rectangle
 #' draw.rectangle(my_rectangle)
+#'
+#' @export
 draw.rectangle <- function(rec, color = "blue", fillColor = "transparent") {
   rectangle_data <- data.frame(
     x = c(0, rec$width, rec$width, 0),
