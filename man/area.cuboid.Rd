@@ -4,10 +4,10 @@
 \alias{area.cuboid}
 \title{Calculate the surface area of a cuboid.}
 \usage{
-\method{area}{cuboid}(cu)
+\method{area}{cuboid}(shp)
 }
 \arguments{
-\item{cu}{An object of class 'shape' representing a cuboid with dimensions depth, width, and height.}
+\item{shp}{An object of class 'shape' representing a cuboid with dimensions depth, width, and height.}
 }
 \value{
 The surface area of the cuboid.

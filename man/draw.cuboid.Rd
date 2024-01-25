@@ -4,12 +4,14 @@
 \alias{draw.cuboid}
 \title{Draw a cuboid in 3D using rgl.}
 \usage{
-\method{draw}{cuboid}(cub, color = "red", ...)
+\method{draw}{cuboid}(shape, color = "red", ...)
 }
 \arguments{
-\item{cub}{An object of class 'shape' representing a cube.}
+\item{shape}{An object of class 'shape' representing a cube.}
 
 \item{color}{The color of the cube (default is "red").}
+
+\item{...}{Additional arguments passed to underlying rgl functions.}
 }
 \description{
 Draw a cuboid in 3D using rgl.

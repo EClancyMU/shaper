@@ -4,10 +4,10 @@
 \alias{area.cube}
 \title{Calculate the surface area of a cube.}
 \usage{
-\method{area}{cube}(cub)
+\method{area}{cube}(shp)
 }
 \arguments{
-\item{cub}{An object of class 'shape' representing a cube with side length.}
+\item{shp}{An object of class 'shape' representing a cube with side length.}
 }
 \value{
 The surface area of the cube.

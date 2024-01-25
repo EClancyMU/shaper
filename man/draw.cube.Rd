@@ -4,12 +4,14 @@
 \alias{draw.cube}
 \title{Draw a cube in 3D using rgl.}
 \usage{
-\method{draw}{cube}(cube, color = "red", ...)
+\method{draw}{cube}(shape, color = "red", ...)
 }
 \arguments{
-\item{cube}{An object of class 'shape' representing a cube.}
+\item{shape}{An object of class 'shape' representing a cube.}
 
 \item{color}{The color of the cube (default is "red").}
+
+\item{...}{Additional arguments passed to underlying rgl functions.}
 }
 \description{
 Draw a cube in 3D using rgl.
