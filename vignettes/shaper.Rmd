@@ -224,7 +224,7 @@ draw(cub)
 
 This command will open a new window displaying the 3D cube which can be interacted such as allowing for rotation and zooming to examine the shape. As all the 3D shapes open in a window, here's what exactly the window looks like for the cube created above.
 
-![](Default Cube.png){width=600px height=300px}
+![](default_cube.png){width=600px height=300px}
 
 The same command can be used to visualize other 3D shapes such as cuboid, sphere and cylinder and just like 2D shapes, users can also change the color of the 3D by changing the value of the color attribute with the default being "red". Here's an example of cylinder with different color instead of the default color "red"
 
@@ -233,4 +233,4 @@ cy <- cylinder(3,5)
 draw(cy, color = "yellow")
 ```
 
-![](Customised Cylinder.png){width=600px height=300px}
+![](customised_cylinder.png){width=600px height=300px}
