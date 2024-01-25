@@ -294,7 +294,7 @@ draw.cuboid <- function(shape, color =  "red", ...) {
 #' # Draw the cube
 #' draw.cube(my_cube)
 #'
-#' @export draw cube
+#' @export
 draw.cube <- function(shape, color = "red", ...) {
   sideLength <- shape$sideLength
 
@@ -349,7 +349,7 @@ draw.cube <- function(shape, color = "red", ...) {
 #' # Draw the cylinder
 #' draw.cylinder(my_cylinder)
 #'
-#' @export draw cylinder
+#' @export
 draw.cylinder <- function(shape, color = "red", ...){
   center <- matrix(c(0, 0, 0, 0, 0, shape$height), ncol = 3, byrow = TRUE)
   radius <- shape$radius
