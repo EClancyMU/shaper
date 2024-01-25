@@ -25,7 +25,7 @@ volume <- function(shp) {
 
 #' Calculate the volume of a cuboid.
 #'
-#' @param cu An object of class '3dShape' representing a cuboid with dimensions
+#' @param shp An object of class '3dShape' representing a cuboid with dimensions
 #' height, width, and depth.
 #' @return The volume of the cuboid.
 #'
@@ -39,13 +39,13 @@ volume <- function(shp) {
 #' volume.cuboid(my_cuboid)
 #'
 #' @export
-volume.cuboid <- function(cu){
-  return(cu$depth * cu$height * cu$width)
+volume.cuboid <- function(shp){
+  return(shp$depth * shp$height * shp$width)
 }
 
 #' Calculate the volume of a cube.
 #'
-#' @param cub An object of class '3dShape' representing a cube with side length.
+#' @param shp An object of class '3dShape' representing a cube with side length.
 #' @return The volume of the cube.
 #'
 #' @family volume functions
@@ -58,13 +58,13 @@ volume.cuboid <- function(cu){
 #' volume.cube(my_cube1)
 #'
 #' @export
-volume.cube <- function(cub){
-  return(cub$sideLength * cub$sideLength * cub$sideLength)
+volume.cube <- function(shp){
+  return(shp$sideLength * shp$sideLength * shp$sideLength)
 }
 
 #' Calculate the volume of a sphere.
 #'
-#' @param sph An object of class '3dShape' representing a sphere with radius.
+#' @param shp An object of class '3dShape' representing a sphere with radius.
 #' @return The volume of the sphere.
 #'
 #' @family volume functions
@@ -77,13 +77,13 @@ volume.cube <- function(cub){
 #' volume.sphere(my_sphere)
 #'
 #' @export
-volume.sphere <- function(sph){
-  return((4/3) * pi * sph$radius^3)
+volume.sphere <- function(shp){
+  return((4/3) * pi * shp$radius^3)
 }
 
 #' Calculate the volume of a cylinder.
 #'
-#' @param cyl An object of class '3dShape' representing a cylinder with radius and height.
+#' @param shp An object of class '3dShape' representing a cylinder with radius and height.
 #' @return The volume of the cylinder.
 #'
 #' @family volume functions
@@ -96,6 +96,6 @@ volume.sphere <- function(sph){
 #' volume.cylinder(my_cylinder)
 #'
 #' @export
-volume.cylinder <- function(cyl){
-  return(pi * cyl$radius^2 * cyl$height)
+volume.cylinder <- function(shp){
+  return(pi * shp$radius^2 * shp$height)
 }
