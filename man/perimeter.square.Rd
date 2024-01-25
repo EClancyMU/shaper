@@ -16,13 +16,11 @@ The perimeter of the square.
 Calculate the perimeter of a square.
 }
 \examples{
-\dontrun{
 # Create a square
 my_square <- square(sideLength = 5)
 
 # Calculate the perimeter of the square
 perimeter.square(my_square)
-}
 
 }
 \seealso{
