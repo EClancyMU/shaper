@@ -25,6 +25,7 @@ summary <- function(shp){
 #' Generate a summary of the parameters for 2D shapes.
 #'
 #' @param shp An object of class 'shape' representing a 2D shape.
+#' @return Name of the shape, Area and Perimeter
 #'
 #' @family summary functions
 #'
@@ -34,15 +35,16 @@ summary <- function(shp){
 #' # Generate a summary for the square
 #' summary.2dShape(my_square)
 #'
-#'
 #' @export
 summary.2dShape <- function(shp){
   cat("Shape:", class(shp)[3], "\nPerimeter:", perimeter(shp), "\nArea:", area(shp))
+
 }
 
 #' Generate a summary of the parameters for 3D shapes.
 #'
 #' @param shp An object of class 'shape' representing a 3D shape.
+#' @return Name of the shape, area and Volume
 #'
 #' @family summary functions
 #'

@@ -1,7 +1,7 @@
 #' Calculate the area of various 2D and 3D shapes.
 #'
 #' This provides functions to calculate the area of various 2D and 3D shapes,
-#' specifically rectangles, squares, circles, triangles, cuboids, cubes, spheres, and cylinders.
+#' specifically rectangles, shpares, circles, triangles, cuboids, cubes, spheres, and cylinders.
 #' The area can be calculated based on the dimensions of each shape.
 #'
 #' @param shp An object of class 'shape'.
@@ -38,6 +38,7 @@ area <- function(shp) {
 #' area.rectangle(my_rectangle)
 #'
 #' @export
+
 area.rectangle <- function(shp) {
   return(shp$height * shp$width)
 }

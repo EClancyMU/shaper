@@ -11,8 +11,7 @@
 
 \item{color}{The color of the sphere (default is "#FF0000 or 'red').}
 
-\item{...}{Additional arguments passed to `sphere3d` and other
-underlying functions.}
+\item{...}{Additional arguments passed to `sphere3d` and other}
 }
 \description{
 Draw a sphere in 3D.

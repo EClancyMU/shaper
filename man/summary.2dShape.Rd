@@ -9,6 +9,9 @@
 \arguments{
 \item{shp}{An object of class 'shape' representing a 2D shape.}
 }
+\value{
+Name of the shape, Area and Perimeter
+}
 \description{
 Generate a summary of the parameters for 2D shapes.
 }
@@ -17,7 +20,6 @@ my_square <- square(sideLength = 5)
 
 # Generate a summary for the square
 summary.2dShape(my_square)
-
 
 }
 \seealso{

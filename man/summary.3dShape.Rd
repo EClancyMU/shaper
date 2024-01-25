@@ -9,6 +9,9 @@
 \arguments{
 \item{shp}{An object of class 'shape' representing a 3D shape.}
 }
+\value{
+Name of the shape, area and Volume
+}
 \description{
 Generate a summary of the parameters for 3D shapes.
 }
