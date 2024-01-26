@@ -23,6 +23,10 @@ License: GPL (>= 3)
 URL: https://github.com/EClancyMU/shaper
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr, rmarkdown
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 RoxygenNote: 7.2.3
+Config/testthat/edition: 3
