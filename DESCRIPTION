@@ -9,14 +9,12 @@ Authors@R: c(
 )
 Maintainer: Eoghan Clancy <eoghan1284@gmail.com>
 Description: Shaper is an R package designed for the creation, analysis, and
-    visualization of fundamental two-dimensional (2D)
-        and three-dimensional (3D) shapes.
-Imports: ggplot2,
-    rgl
+    visualization of fundamental two-dimensional (2D) and 
+    three-dimensional (3D) shapes.
+Imports: ggplot2, rgl
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr,
-    rmarkdown
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 7.2.3
